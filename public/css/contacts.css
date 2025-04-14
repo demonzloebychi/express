@@ -1,0 +1,43 @@
+
+.adress__wrapper{
+    padding-bottom: clamp(40px, 4vw, 100px);
+    border-bottom: 1px solid #d9d9d9;
+}
+.adress__cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: clamp(40px, 4vw, 80px);
+    margin-bottom: clamp(30px, 3.5vw, 50px);
+    gap: 20px;
+}
+
+.card-adress{
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.card-adress__name {
+    font-weight: 200;
+    font-size: clamp(15px, 2vw, 24px);
+}
+.card-adress__location {
+    color: var(--main-font);
+    font-family: "Geologica", sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.adress__map{
+    height: clamp(300px, 40vw, 650px);
+}
+
+@media (max-width:768px){
+    .adress__cards{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}

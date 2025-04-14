@@ -1,0 +1,110 @@
+.price-from {
+    margin-block: clamp(60px, 7vw, 122px);
+
+}
+.price-from__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.price-from__title {
+  font-size: clamp(27px, 8vw, 72px);
+}
+.price-from__sum {
+  color: var(--main-background);
+  padding: clamp(15px, 2vw, 40px);
+  border-radius: 20px;
+  font-size: clamp(16px, 3vw, 72px);
+}
+
+
+
+
+
+.price-all__title {
+    padding-bottom: clamp(25px, 3vw, 40px);
+    border-bottom: 1px solid var(--main-font);
+}
+
+.price-all .tech-price {
+    margin: 0;
+}
+
+
+.body-price-all__title {
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-font);
+
+    margin: 80px 0 55px 0;
+}
+.price-all__nav {
+    display: flex;
+    gap: clamp(20px, 3vw, 30px);
+    flex-wrap: wrap;
+    margin-block: 40px;
+    justify-content: center;
+}
+.nav-price-all {
+}
+.nav-price-all__item {
+    border-radius: 1000px;
+    padding: clamp(10px, 2.6vw, 20px);
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+
+
+
+    color: var(--contrast-color);
+    background: var(--main-background);
+    border: 1px solid var(--contrast-color);
+
+}
+.nav-price-all__item.is-active {
+    color: var(--second-dark-color);
+    background-color: var(--contrast-color);
+    -webkit-box-shadow: 0px 2px 16px 0px rgba(188, 255, 46, 0.28);
+    box-shadow: 0px 2px 16px 0px rgba(188, 255, 46, 0.28);
+}
+
+.price-all__body {
+    display: none;
+
+
+}
+
+.price-all__body .tech-price__cards {
+    display: flex;
+    justify-content: center;
+}
+.price-all__body .tech-price__cards .tp-card {
+    aspect-ratio: 1 / 1;
+}
+.price-all__body.is-active{
+    display: block;
+}
+
+
+@media (max-width:1480px) {
+    .price-all__body .tech-price__cards {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .price-all__nav {
+        flex-direction: column;
+    }
+}
+
+
