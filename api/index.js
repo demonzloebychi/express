@@ -61,6 +61,19 @@ async function createRoutes(app) {
   }
 }
 
+
+app.use((req, res, next) => {
+  // Проверяем, заканчивается ли URL на ".html"
+  if (req.url.endsWith('.html')) {
+    // Убираем ".html" из URL и делаем редирект
+    const newUrl = req.url.slice(0, -5); // Удаляем последние 5 символов (".html")
+    res.redirect(301, newUrl); // 301 - постоянный редирект
+  } else {
+    next(); // Если URL не заканчивается на ".html", продолжаем обработку
+  }
+});
+
+
 // Создаем маршруты и экспортируем app
 (async () => {
   await createRoutes(app);
