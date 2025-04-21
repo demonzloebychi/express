@@ -308,7 +308,7 @@
 
 .icons__404 {
     border-top: 1px solid #D9D9D9;
-    padding-top: 40px;
+    padding-top: 30px;
     .item-tabs-base__btns {
 
         display: flex;
@@ -321,6 +321,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -80px;
 }
 .title__404 {
     margin-bottom: clamp(30px, 3vw, 40px);
@@ -349,8 +350,10 @@
 .block__image__404 {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    /* margin-top: 80px; */
     margin-bottom: 25px;
+    scale: 0.75;
+    margin-top: -40px;
     
     picture{
         img{

@@ -14,13 +14,13 @@ const numberInput = document.querySelector('#number')
 
   submitForm.addEventListener('click', function(e) {
       e.preventDefault(); 
-      highlightEmptyFields();
+      // highlightEmptyFields();
 
       if (checkFields()) {
           popup.classList.add('active')
           popupOverlay.classList.add('active')
       } else {
-        //   alert('Пожалуйста, заполните Обязательные поля!');
+          alert('Пожалуйста, заполните Обязательные поля!');
       }
   })
   
