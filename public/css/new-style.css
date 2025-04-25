@@ -351,7 +351,6 @@
 .block__image__404 {
     display: flex;
     justify-content: center;
-    /* margin-top: 80px; */
     margin-bottom: 25px;
     scale: 0.75;
     margin-top: -40px;
@@ -436,12 +435,7 @@
 }
 
 
-@media (max-width: 768px) {
-    .icons__404 .item-tabs-base__btns{
-        display: none;
-    }
-    
-}
+
 
 
 
