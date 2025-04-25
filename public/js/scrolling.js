@@ -1,5 +1,5 @@
 const header = document.querySelector('.header');
-const scrollChange = 920; // Порог прокрутки
+const scrollChange = 200; // Порог прокрутки
 
 window.addEventListener('scroll', function() {
   const scrollpos = window.scrollY;

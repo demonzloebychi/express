@@ -403,6 +403,14 @@
 }
 
 
+
+@media (max-width:988px) {
+    .block__404 {
+        margin-top: -10px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .icons__404 .item-tabs-base__btns{
         display: none;
