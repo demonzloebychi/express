@@ -572,7 +572,37 @@ body.lock {
   border-radius: 8px;
 }
 
-@media (max-width: 925px) {
+
+@media (max-width: 1780px) and (min-width: 950px) {
+  .menu__top {
+    scale: 0.9;
+  }
+
+  .menu__list {
+    width: 105%;
+  }
+  .menu__list::after {
+    display: none;
+  }
+
+  .sub-menu__list.open {
+    width: 70%;
+  }
+  .sub-menu__list::after {
+    display: none;
+  }
+
+  
+  .sub-sub-menu__list.open {
+    padding-inline: 0px;
+    width: 160%;
+  }
+}
+
+
+/* @media (max-width: 925px) */
+
+@media (max-width: 950px) {
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -615,6 +645,8 @@ body.lock {
     padding: 10px 20px;
   }
 }
+
+
 @media (max-width: 500px) {
   .menu.active {
     display: -webkit-box;
@@ -1359,12 +1391,13 @@ body.lock {
 .base__tabs .item-tabs-base__main-text {
   color: var(--main-font);
   font-family: "Geologica", sans-serif;
-  font-size: clamp(28px, 6vw, 102px);
+  font-size: clamp(28px, 5.4vw, 102px);
   font-weight: 600;
   line-height: 1.1;
   text-transform: uppercase;
   z-index: 5;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 65%;
 }
 .base__tabs .item-tabs-base__main-text--develop {
   margin-top: 60px;

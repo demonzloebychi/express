@@ -443,3 +443,10 @@
     scale:1.2; 
     top: 60px;
 }
+
+
+@media (max-width: 1440px) {
+    .item-tabs-base__img-back--template-service {
+        top: 85px;
+    }
+}
