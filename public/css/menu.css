@@ -1,0 +1,260 @@
+.header {
+}
+.container {
+}
+.header__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: clamp(20px, 4vw, 30px);
+    padding-bottom: clamp(20px, 4vw, 30px);
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+.logo {
+  width: clamp(120px, 25vw, 201px);
+}
+.header__hours-work {
+}
+.header__phone-info {
+    display: flex;
+    gap: 15px;
+}
+.header__phone {
+}
+.text {
+}
+.header__text {
+}
+.text-s {
+}
+.header__telegram {
+}
+.header__email-info {
+    display: flex;
+    gap: 15px;
+}
+.btn {
+}
+.green-btn {
+}
+.header__btn{
+    width: fit-content;
+    padding-inline: 30px;
+}
+
+
+
+
+
+.header__bottom {
+}
+.header__menu-list {
+}
+
+
+
+.menu-block {
+    
+}
+
+
+
+.menu-block__list {
+    display: flex;
+    gap: 20px;
+
+    border: 1px solid var(--main-font);
+    padding: 15px 25px 0 25px !important;
+    border-radius: 10px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.24);
+}
+.menu-block__list li {
+    position: relative;
+    padding-bottom: 15px;
+}
+.menu-block__link {
+}
+.link {
+}
+
+@media (hover:hover) {
+    .menu-block__list>li:hover .sub-menu-block__list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        position: absolute;
+        left: 0;
+
+        background: var(--main-background);
+        border: 1px solid var(--main-font);
+        padding: 15px 15px 15px 15px !important;
+        border-radius: 10px;
+        margin-top: 15px;
+        width: fit-content !important;
+        white-space: nowrap;
+        
+    }  
+}
+.sub-menu-block__list {
+    display: none;
+}
+.sub-menu-block__link {
+}
+
+
+
+
+
+
+
+
+
+
+.burger {
+    display: none;
+}
+
+
+
+
+@media (max-width:998px) {
+    
+.burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+  cursor: pointer;
+}
+.header__burger-text {
+  font-family: "Geologica", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+.header__burger {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 29px;
+  height: 17px;
+  z-index: 3;
+  position: relative;
+}
+.header__burger span {
+  position: absolute;
+  background-color: #fff;
+  left: 6px;
+  width: 23px;
+  height: 2px;
+  top: 7px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.header__burger::before,
+.header__burger::after {
+  content: " ";
+  position: absolute;
+  width: 23px;
+  background-color: #fff;
+  height: 2px;
+  left: 0px;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 5;
+}
+.header__burger::before {
+  top: 0px;
+}
+.header__burger::after {
+  bottom: 1px;
+}
+.header__burger.active:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 7px;
+}
+.header__burger.active::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: 8px;
+}
+.header__burger.active span {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  color: #828282;
+}
+}
+
+
+@media (max-width: 500px) {
+  .menu.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 70px;
+  }
+  .header__burger-text {
+    font-size: 13px;
+  }
+  .burger {
+    gap: 5px;
+  }
+  .header__burger {
+    width: 16px;
+    height: 9px;
+  }
+  .header__burger span {
+    left: 3px;
+    width: 13px;
+    height: 1px;
+    top: 4px;
+  }
+  .header__burger::before,
+  .header__burger::after {
+    width: 13px;
+    height: 1px;
+    left: 0px;
+  }
+  .header__burger::before {
+    top: 0px;
+  }
+  .header__burger::after {
+    bottom: 0px;
+  }
+  .header__burger.active:before {
+    top: 4px;
+  }
+  .header__burger.active::after {
+    bottom: 4px;
+  }
+}

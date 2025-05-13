@@ -88,6 +88,8 @@ if (animItems.length > 0) {
   }
   animOnScroll();
 }
+
+
 const burgerIcon = document.querySelector(".burger");
 const burger = document.querySelector(".header__burger");
 const menu = document.querySelector(".menu");
@@ -106,6 +108,9 @@ if (burgerIcon) {
     menus.classList.toggle("active");
   });
 }
+
+
+
 const accordionItems = document.querySelectorAll(".accordion-item");
 for (let i = 0; i < accordionItems.length; i++) {
   accordionItems[i].addEventListener("click", function () {
