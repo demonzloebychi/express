@@ -175,6 +175,16 @@ body {
   line-height: 110%;
 }
 
+
+
+ 
+.m-text {
+ font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.5;
+}
+
 .s-text {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -202,7 +212,7 @@ body.lock {
   background: rgba(0, 0, 0, 0.24);
 }
 .main {
-  margin-top: clamp(70px, 13vw, 174px);
+  margin-top: clamp(70px, 15vw, 214px);
 }
 
 .main.active {
