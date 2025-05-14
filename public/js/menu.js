@@ -6,6 +6,7 @@ if (burgerIcon) {
   burgerIcon.addEventListener("click", function (e) {
     document.body.classList.toggle("lock");
     burger.classList.toggle("active");
+    header.classList.toggle("active");
     headerBottom.classList.toggle("active");
     headerTop.classList.toggle("active");
 
@@ -16,13 +17,17 @@ if (burgerIcon) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Проверяем, мобильное ли устройство
+  // Проверяем, мобильное ли устройство (тачскрин)
   function isMobile() {
     return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
   }
 
-  if (isMobile()) {
-    // Находим все пункты меню с подменю
+  // Проверяем ширину экрана
+  function isSmallScreen() {
+    return window.innerWidth < 1024;
+  }
+
+  if (isMobile() || isSmallScreen()) {
     document.querySelectorAll('.menu-block__list > li').forEach(function (menuItem) {
       const link = menuItem.querySelector('.menu-block__link');
       const subMenu = menuItem.querySelector('.sub-menu-block__list');
@@ -32,10 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function (e) {
           if (!opened) {
             e.preventDefault(); // Первый клик - открываем подменю
+
             // Скрываем все остальные подменю
             document.querySelectorAll('.sub-menu-block__list').forEach(function (sm) {
               if (sm !== subMenu) sm.style.display = 'none';
             });
+
             subMenu.style.display = 'block';
             opened = true;
           } else {
@@ -58,99 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   let menuLinks = document.querySelectorAll(".menu__link");
-//   let subLinks = document.querySelectorAll(".sub-menu__link");
-
-//   // Обработчик для главных пунктов меню
-//   menuLinks.forEach((link, index) => {
-//       let clickCount = 0; // Счетчик кликов для каждого элемента меню
-//       let subMenuOpen = false; // Флаг для отслеживания открытия подменю
-
-//       link.addEventListener("click", function(event) {
-         
-//           if (index === 0) {
-//               event.preventDefault(); // Предотвращаем переход по ссылке
-//               let subMenu = this.nextElementSibling;
-//               clickCount++;
-
-
-//               if (clickCount === 1) {
-//                   // Закрываем все подменю
-//                   menuLinks.forEach(otherLink => {
-//                       if (otherLink !== this) {
-//                           let otherSubMenu = otherLink.nextElementSibling;
-//                           if (otherSubMenu && otherSubMenu.classList.contains("open")) {
-//                               otherSubMenu.classList.remove("open");
-//                               otherLink.classList.remove("active");
-//                           }
-//                       }
-//                   });
-
-//                   // Переключаем текущее подменю
-//                   if (subMenu) {
-//                       subMenu.classList.toggle("open");
-//                       this.classList.toggle("active");
-//                       subMenuOpen = subMenu.classList.contains("open");
-//                   }
-//               } else if (clickCount === 2 && subMenuOpen) {
-//                   // Сбрасываем счетчик и переходим по ссылке
-//                   clickCount = 0;
-//                   subMenuOpen = false;
-//                   window.location.href = this.href;
-
-//               } else if (clickCount === 2 && !subMenuOpen){
-//                 clickCount = 0;
-//                 subMenuOpen = false;
-//               }
-//           } else {
-//               // Для остальных ссылок разрешаем переход
-//               window.location.href = this.href; // Переход по ссылке
-//           }
-//       });
-//   });
-
-
-//   // Обработчик для подменю
-//   subLinks.forEach(subLink => {
-//       let subClickCount = 0; // Счетчик кликов для каждого элемента подменю
-//       let subSubMenuOpen = false; // Флаг для отслеживания открытия подподменю
-
-//       subLink.addEventListener("click", function(event) {
-//           event.stopPropagation(); // Предотвращаем всплытие события
-
-//           let subSubMenu = this.nextElementSibling;
-//           subClickCount++;
-
-//           if (subClickCount === 1) {
-//               // Закрываем все остальные подподменю
-//               subLinks.forEach(otherSubLink => {
-//                   if (otherSubLink !== this) {
-//                       let otherSubSubMenu = otherSubLink.nextElementSibling;
-//                       if (otherSubSubMenu && otherSubSubMenu.classList.contains("open")) {
-//                           otherSubSubMenu.classList.remove("open");
-//                           otherSubLink.classList.remove("active");
-//                       }
-//                   }
-//               });
-
-//               // Переключаем текущее подподменю
-//               if (subSubMenu) {
-//                   subSubMenu.classList.toggle("open");
-//                   this.classList.toggle("active");
-//                   subSubMenuOpen = subSubMenu.classList.contains("open");
-//               }
-//           } else if (subClickCount === 2 && subSubMenuOpen) {
-//               subClickCount = 0;
-//               subSubMenuOpen = false;
-//               window.location.href = this.href;
-//           }else if (subClickCount === 2 && !subSubMenuOpen) {
-//               subClickCount = 0;
-//               subSubMenuOpen = false;
-//           }
-//       });
-//   });
-// });
 
 
 

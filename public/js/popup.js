@@ -12,6 +12,9 @@ const numberInput = document.querySelector('#number')
   }
 
 
+
+
+
   submitForm.addEventListener('click', function(e) {
       e.preventDefault(); 
       // highlightEmptyFields();
@@ -37,3 +40,40 @@ const numberInput = document.querySelector('#number')
         closePopup();
       }
   });
+
+
+
+
+
+
+
+const popupCall = document.querySelector('#popup-call');
+const popupCallBtn = document.querySelector('#popup-call-btn');
+const popupCallSubmit = document.querySelector('#popup-call__submit')
+
+
+popupCallBtn.addEventListener('click', function() {
+    popupCall.classList.toggle('active');
+});
+
+popupCallSubmit.addEventListener('click', function(e) {
+    e.preventDefault(); 
+    // highlightEmptyFields();
+
+    if (checkFields()) {
+        popupCall.classList.remove('active')
+        popup.classList.add('active')
+        popupOverlay.classList.add('active')
+    } else {
+        alert('Пожалуйста, заполните Обязательные поля!');
+    }
+})
+
+
+const closePopupCall = () => {
+    popupCall.classList.remove('active')
+}
+popupClose.addEventListener('click', closePopupCall)
+
+
+

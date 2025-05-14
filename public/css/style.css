@@ -1278,7 +1278,7 @@ body.lock {
   text-transform: uppercase;
   z-index: 5;
   white-space: normal;
-  max-width: 65%;
+  max-width: 70%;
 }
 .base__tabs .item-tabs-base__main-text--develop {
   margin-top: 60px;
