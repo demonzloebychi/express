@@ -138,7 +138,7 @@
 
    
 }
-.menu-block__list li {
+.menu-block__list>li {
     position: relative;
     padding-bottom: 15px;
 }
