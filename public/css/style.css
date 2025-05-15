@@ -96,7 +96,6 @@ body {
   font-weight: 400;
   line-height: 1.2;
   font-family: "Geologica", sans-serif;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -179,7 +178,7 @@ body {
 
  
 .m-text {
- font-family: "Manrope", sans-serif;
+ font-family: "Geologica", sans-serif;
   font-weight: 400;
   font-size: clamp(16px, 1.5vw, 20px);
   line-height: 1.5;

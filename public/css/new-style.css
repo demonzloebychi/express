@@ -1,4 +1,7 @@
-@import url(menu.css);
+@import url(header.css);
+
+@import url(footer.css);
+
 
 
 .case-link__wrapper {

@@ -1,0 +1,96 @@
+.footer {
+}
+.container {
+}
+.footer__wrapper {
+}
+.footer__column {
+   
+}
+.footer__logo {
+}
+.logo {
+}
+.footer__akticom {
+}
+.policy {
+}
+.footer__policy {
+     font-family: "Geologica", sans-serif;
+        font-weight: 400;
+        font-size: clamp(13px, 1.6vw, 15px);
+        line-height: 120%;
+        color: #d4d4d4;
+}
+
+
+.footer__menu-title {
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: clamp(15px, 2vw, 20px);
+    line-height: 120%;
+    color: var(--main-font);
+    margin-bottom: clamp(10px, 1.3vw, 17px);
+
+}
+.footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10px, 1.3vw, 17px);
+   
+
+    li a {
+        font-family: "Geologica", sans-serif;
+        font-weight: 400;
+        font-size: clamp(13px, 1.6vw, 15px);
+        line-height: 120%;
+        color: #d4d4d4;
+    }
+}
+
+
+
+
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+.header__phone-info {
+}
+.header__phone_blocks {
+}
+.header__phone {
+}
+.header__phone-text {
+}
+.header__email {
+}
+.header__hours-work {
+}
+.xs-text {
+}
+
+
+
+
+
+.footer__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.btn {
+}
+.sgreen-btn {
+}
+.s-text {
+}
+.header__btn {
+}
+.header__social {
+}

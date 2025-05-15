@@ -14,7 +14,7 @@
                         Работаем пн-пт <br> с 9:00 до 18:00 (по МСК)
                     </div>
 
-                    <div class="header__phone-info">
+                    <a  href="tel:+78003014501" class="header__phone-info">
                         <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_2627_4375)">
                         <rect y="0.5" width="45" height="45" rx="22.5" fill="white" fill-opacity="0.44"/>
@@ -29,11 +29,11 @@
                         </svg>
 
                         <div class="header__phone_blocks">
-                            <a href="tel:+78003014501" class="header__phone">8 (800) 301 45 01</a>
+                            <p class="header__phone">8 (800) 301 45 01</p>
                             <p class="header__phone-text">бесплатный звонок по РФ </p>
                         </div>
                         
-                    </div>
+                    </a>
 
                     <div class="header__social">
                         <a href="">
@@ -85,7 +85,7 @@
                         
                     </div>
 
-                    <button class="btn sgreen-btn s-text header__btn" id="popup-call-btn">
+                    <button class="btn sgreen-btn s-text header__btn popup-call-btn popup-call-btn">
                         Заказать звонок
                     </button>
 
@@ -314,7 +314,7 @@
 
                         <div class="header__info-block">
                             <div class="header__phone-info">
-                            <svg width="30" height="30" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="35" height="35" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2627_4375)">
                             <rect y="0.5" width="45" height="45" rx="22.5" fill="white" fill-opacity="0.44"/>
                             <path d="M15.775 21.4875C17.575 25.025 20.475 27.9125 24.0125 29.725L26.7625 26.975C27.1 26.6375 27.6 26.525 28.0375 26.675C29.4375 27.1375 30.95 27.3875 32.5 27.3875C33.1875 27.3875 33.75 27.95 33.75 28.6375V33C33.75 33.6875 33.1875 34.25 32.5 34.25C20.7625 34.25 11.25 24.7375 11.25 13C11.25 12.3125 11.8125 11.75 12.5 11.75H16.875C17.5625 11.75 18.125 12.3125 18.125 13C18.125 14.5625 18.375 16.0625 18.8375 17.4625C18.975 17.9 18.875 18.3875 18.525 18.7375L15.775 21.4875Z" fill="#B8FF20"/>
@@ -329,14 +329,14 @@
 
                             <div class="header__phone_blocks">
                                 <a href="tel:+78003014501" class="header__phone text">8 (800) 301 45 01</a>
-                                <p class="header__text text-s">бесплатный звонок по РФ </p>
+                                <p class="header__phone-text">бесплатный звонок по РФ </p>
                             </div>
                             
                             </div>
 
                             <div class="header__social">
                                 <a href="">
-                                    <svg width="30" height="30" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="35" height="35" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2627_4382)">
                                     <rect y="0.5" width="45" height="45" rx="22.5" fill="white" fill-opacity="0.44"/>
                                     <g clip-path="url(#clip1_2627_4382)">
@@ -357,7 +357,7 @@
                                 </a>
 
                                 <a href="">
-                                    <svg width="30" height="30" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="35" height="35" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_2627_4388)">
                                     <rect y="0.5" width="45" height="45" rx="22.5" fill="white" fill-opacity="0.44"/>
                                     <g clip-path="url(#clip1_2627_4388)">
@@ -385,7 +385,7 @@
                                 <a href="mailto:mail@akticom.ru" class="header__phone text">mail@akticom.ru</a>
                             </div>
 
-                            <div class="header__hours-work">
+                            <div class="header__hours-work xs-text">
                                 Работаем пн-пт <br> с 9:00 до 18:00 (по МСК)
                             </div>
                         </div>
@@ -412,8 +412,8 @@
 </header>
 
 
-
-<div class="popup popup-call" id="popup-call">
+<div class="popup-call__overlay">
+    <div class="popup popup-call" id="popup-call">
     <button class="popup__close">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.74995 0.000213999L29.9996 26.25L26.2497 30L0 3.75019L3.74995 0.000213999Z" fill="#B8FF20" />
@@ -436,18 +436,20 @@
         Наш менеджер свяжется с вами в ближайшее время!
     </p>
 
-    <input type="name" class="input input__name" id="name" placeholder="Ваше имя">
+    <input type="name" class="input input__name popup-call__name"  placeholder="Ваше имя">
 
-    <input type="phone" class="input input__phone" id="number" placeholder="Номер телефона" maxlength="18" required>
+    <input type="phone" class="input input__phone popup-call__phone"  placeholder="Номер телефона" maxlength="18" required>
 
     <input type="text" class="input input__text" placeholder="Комментарий">
 
 
-    <a href="#" class="popup__btn green-btn popup-call__btn" id="popup-call__submit">
+    <a href="#" class="popup__btn green-btn" id="popup-call__submit">
         Обсудить проект
     </a>
 
 </div>
+</div>
+
 
 
 

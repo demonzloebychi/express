@@ -42,13 +42,21 @@
     font-size: 20px;
     line-height: 120%;
     color: var(--main-font);
-    
+    cursor: pointer;
 }
+
+.header__phone_blocks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 
 .header__phone-text {
     font-family: "Geologica", sans-serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: clamp(12px, 1.3vw, 13px);
     line-height: 120%;
     color: var(--main-font);
     opacity: 0.8;
@@ -57,6 +65,25 @@
 .header__social {
     display: flex;
     gap: clamp(11px, 2vw, 15px);
+    cursor: pointer;
+}
+
+
+@media (hover:hover) {
+  .header__phone:hover {
+    color: var(--contrast-color);
+  }
+
+  .header__social a:hover svg rect{
+    opacity: 0.7;
+  }
+
+  .header__phone-info:hover svg rect{
+    opacity: 0.7;
+  }
+  .header__phone-info:hover .header__phone {
+    color: var(--contrast-color);
+  }
 }
 
 .header__email {
@@ -122,7 +149,7 @@
         flex-direction: column;
         gap: 7px;
         position: absolute;
-        left: 0;
+        left: -25px;
 
         background: var(--main-background);
         border: 1px solid var(--main-font);
@@ -398,6 +425,20 @@
     margin-bottom: 15px;
 }
 
+
+.popup-call__overlay {
+  display: none;
+}
+
+.popup-call__overlay.active {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 130;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+}
 
 
 .popup-call__btn {
