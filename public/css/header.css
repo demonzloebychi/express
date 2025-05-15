@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: clamp(20px, 4vw, 30px);
+    padding-top: clamp(20px, 4vw, 24px);
     padding-bottom: clamp(20px, 4vw, 30px);
 }
 
@@ -136,7 +136,7 @@
     backdrop-filter: blur(15px);
     background: rgba(0, 0, 0, 0.24);
 
-   
+    justify-content: space-between;
 }
 .menu-block__list>li {
     position: relative;
