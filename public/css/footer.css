@@ -58,6 +58,12 @@
     gap: 35px;
 }
 
+.footer__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 55px;
+}
 
 .header__phone-info {
 }
