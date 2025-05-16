@@ -34,12 +34,14 @@
 
 }
 .footer__menu-list {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: clamp(10px, 1.3vw, 17px);
-   
+    gap: clamp(10px, 1.3vw, 17px); */
+    
 
     li a {
+        display: block;
+        padding-bottom: clamp(10px, 1.3vw, 17px);
         font-family: "Geologica", sans-serif;
         font-weight: 400;
         font-size: clamp(13px, 1.6vw, 15px);
@@ -99,4 +101,51 @@
 .header__btn {
 }
 .header__social {
+}
+
+#mobile-info .footer__info{
+    display: none;
+}
+
+.footer__menu-list--count {
+    column-count: 2;
+    column-gap: clamp(21px, 2.5vw, 46px);
+}
+
+
+@media (max-width: 768px) {
+    #mobile-info {
+        .footer__info {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        .footer__akticom,.footer__policy {
+            display: block;
+        }
+
+             
+    } 
+
+    .footer__logo {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .footer__btn {
+        width: 100%;
+    }
+
+    .footer__info {
+        display: none;
+
+    }
+
+    .footer__socials {
+        display: none;
+    }
+
+    .footer__akticom,.footer__policy {
+        display: none;
+    }
 }
