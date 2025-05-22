@@ -456,3 +456,19 @@
         top: 85px;
     }
 }
+
+
+
+
+
+
+
+
+
+.case-single h1 {
+    font-size: clamp(34px, 7vw, 76px) !important;
+}
+
+.case-single h2 {
+    font-size: clamp(30px, 4vw, 64px) !important;
+}
