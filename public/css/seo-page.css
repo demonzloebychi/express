@@ -1,0 +1,51 @@
+.sp-about {
+
+  
+}
+
+.sp-about__wrapper {
+    padding-bottom: clamp(60px, 7vw, 100px);
+    border-bottom: 1px solid #d9d9d9;
+
+}
+
+.sp-about__list {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: space-between;
+  }
+.sp-about__item {
+
+}
+
+.item-sp-about {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--contrast-color);
+    border-radius: 15px;
+    background: #303030;
+    padding: clamp(20px, 2.3vw, 30px);
+    max-width: 425px;
+
+    p {
+        margin-top: auto;
+        font-family: "Geologica", sans-serif;
+        font-weight: 400;
+        font-size: clamp(20px, 2.3vw, 28px);
+        line-height: 110%;
+        color: var(--main-font);
+
+    }
+}
+
+.item-sp-about__title {
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    font-size: clamp(40px, 4vw, 72px);
+    line-height: 110%;
+    color: var(--contrast-color);
+    white-space: nowrap;
+
+}
