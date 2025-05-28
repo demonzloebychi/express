@@ -1,3 +1,7 @@
+.center-btn {
+    margin: 0 auto;
+}
+
 .sp-about {
 
   
@@ -14,12 +18,14 @@
     /* flex-wrap: wrap; */
     gap: 20px;
     justify-content: space-between;
-  }
+}
 .sp-about__item {
 
 }
 
 .item-sp-about {
+    flex: 1 1 0;
+
     display: flex;
     flex-direction: column;
 
@@ -48,4 +54,74 @@
     color: var(--contrast-color);
     white-space: nowrap;
 
+}
+
+@media (max-width:1024px) {
+    .sp-about__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .sp-case-task__wrapper {
+        margin-top: 60px !important;
+        border-top: 1px solid #d9d9d9 !important;
+        border-bottom: 0px solid #d9d9d9 !important;
+
+    }
+        
+}
+
+
+
+
+
+
+.sp-how-work__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(15px, 2vw, 40px);
+}
+.sp-how-work__card {
+}
+.card-sp-how-work {
+    flex: 1 1 calc((100% - 2 * 40px) / 3);;
+
+    display: flex;
+    flex-direction: column;
+
+
+    border-radius: 15px;
+    padding: clamp(20px, 2.3vw, 30px);
+    background: var(--second-dark-color);
+    max-width: 560px;
+    min-width: 345px;
+}
+.sp-how-work__svg {
+    margin-bottom: clamp(15px, 2vw, 30px);
+}
+.sp-how-work__title {
+}
+.sp-how-work__text {
+    margin-top: 20px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--main-font);
+}
+
+
+@media (max-width: 768px) {
+
+    .card-sp-how-work {
+        flex: 1 1 0;
+        min-width: 100%;
+    }
+    .sp-how-work__text {
+        display: none;
+    }
 }
