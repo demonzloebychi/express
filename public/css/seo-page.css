@@ -37,7 +37,13 @@
 }
 
 .case-task__text--seo-page {
-    filter: grayscale(100%)
+    filter: grayscale(100%);
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 24px);
+    line-height: 120%;
+    color: var(--main-font);
 }
 
 .item-tabs-base__img-back--template-seo-page {
