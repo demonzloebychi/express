@@ -254,12 +254,12 @@
                 </div>
 
                 <h1
-                  class="item-tabs-base__main-text item-tabs-base__main-text--promo _anim-items _anim-no-hide _anim-fade-in-down"
+                  class="item-tabs-base__main-text item-tabs-base__main-text--seo-page _anim-items _anim-no-hide _anim-fade-in-down"
                 >
                   Разовая оптимизация сайта
                 </h1>
                 <p
-                  class="item-tabs-base__support-text _anim-items _anim-no-hide _anim-fade-in-left"
+                  class="item-tabs-base__support-text item-tabs-base__support-text--seo-page _anim-items _anim-no-hide _anim-fade-in-left"
                 >
                   Проведем технический аудит, устраним ошибки, настроим
                   метаданные и улучшим внутреннюю структуру, чтобы сайт
@@ -268,13 +268,17 @@
                 </p>
 
                 <div
-                  class="item-tabs-base__img is-active _anim-items _anim-no-hide _anim-from-right-bot base-background base-background--promotion base-background--single-service"
+                  class="item-tabs-base__img is-active _anim-items _anim-no-hide _anim-from-right-bot base-background base-background--promotion base-background--single-service base-background--seo-page"
                 >
-                  <img
+                  <!-- <img
                     class="item-tabs-base__img-back item-tabs-base__img-back--template-service"
                     src="/img/template-service.png"
                     alt=""
-                  />
+                  /> -->
+                    <picture class="item-tabs-base__img-back item-tabs-base__img-back--template-seo-page">
+                        <source srcset="/img/seo-page/base-mobile.png" media="(max-width: 600px)" />
+                        <img src="/img/seo-page/base.png" alt="">
+                    </picture>
                 </div>
               </div>
             </div>
@@ -288,15 +292,15 @@
           <div class="container">
             <div class="case-task__wrapper sp-case-task__wrapper">
               <div
-                class="case-task__info display-case display-case--single-service"
+                class="case-task__info display-case display-case--single-service display-case--seo-page"
               >
                 <h2
-                  class="title-h2 case-task__title _anim-items _anim-no-hide _anim-fade-in-left"
+                  class="title-h2 case-task__title case-task__title--seo-page _anim-items _anim-no-hide _anim-fade-in-left"
                 >
                   Что такое SEO и какой результат вы получаете
                 </h2>
                 <div
-                  class="text case-task__text _anim-items _anim-no-hide _anim-fade-in-right"
+                  class="text case-task__text case-task__text--seo-page _anim-items _anim-no-hide _anim-fade-in-right"
                 >
                   <p>
                     Разовая настройка помогает сайту работать быстрее и
@@ -344,11 +348,11 @@
               <ul class="sp-about__list">
                 <li class="sp-about__item item-sp-about">
                   <div class="item-sp-about__title">15+</div>
-                  <p>лет успешного опыта на рынке digital-услуг</p>
+                  <p>лет успешного <br> опыта на рынке digital-услуг</p>
                 </li>
                 <li class="sp-about__item item-sp-about">
                   <div class="item-sp-about__title">100 000+</div>
-                  <p>запросов выведено в ТОП</p>
+                  <p>запросов <br> выведено в ТОП</p>
                 </li>
                 <li class="sp-about__item item-sp-about">
                   <div class="item-sp-about__title">500+</div>
@@ -599,6 +603,9 @@
 
         <div class="sp-steps">
           <div class="container">
+            <h2 class="title-h2 sp-steps__title">
+              этапы работы
+            </h2>
             <div class="sp-steps__wrapper">
               <ul class="sp-steps__list">
                 <li class="sp-steps__item item-sp-steps">
@@ -710,6 +717,9 @@
                   <li>Юридические услуги</li>
                 </ul>
               </div>
+
+              <button class="btn green-btn center-btn show-more-btn">Показать еще</button>
+
             </div>
           </div>
         </div>
@@ -827,6 +837,9 @@
 
         <div class="review _anim-items _anim-no-hide _anim-fade-in-top">
           <div class="container">
+            <h2 class="title-h2 sp-review__title">
+              Отзывы
+            </h2>
             <div class="review__wrappper">
               <div class="review__cards cards-review sp-card-review">
                 <div class="card-review">
@@ -1381,6 +1394,7 @@
 
       <!--FOOTER-->
         <script src="/js/popup.js"></script>
+        <script src="/js/show-more-btn.js" ></script>
 
     </div>
   </body>
