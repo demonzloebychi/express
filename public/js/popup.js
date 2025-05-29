@@ -85,6 +85,14 @@ const numberInput = document.querySelector('#number')
 
 
 
+function checkCallFormFields() {
+    const phoneInput = popupCall.querySelector('.popup-call__phone');
+    const policyCheckbox = popupCall.querySelector('.checkbox-label .checkbox');
+    const phoneFilled = phoneInput && phoneInput.value.trim() !== '';
+    const checkboxChecked = policyCheckbox && policyCheckbox.checked;
+    return phoneFilled && checkboxChecked;
+}
+
 
 
 const popupCall = document.querySelector('#popup-call');
@@ -107,20 +115,20 @@ popupCallBtn.forEach(btn => {
 popupCallSubmit.addEventListener('click', function(e) {
     e.preventDefault(); 
     // highlightEmptyFields();
-    popupCall.classList.remove('active')
-        popupCallOverlay.classList.remove('active')
-        popup.classList.add('active')
-        popupOverlay.classList.add('active')
-
-
-    // if (checkFields()) {
-    //     popupCall.classList.remove('active')
+    // popupCall.classList.remove('active')
     //     popupCallOverlay.classList.remove('active')
     //     popup.classList.add('active')
     //     popupOverlay.classList.add('active')
-    // } else {
-    //     alert('Пожалуйста, заполните Обязательные поля!');
-    // }
+
+
+    if (checkCallFormFields()) {
+        popupCall.classList.remove('active')
+        popupCallOverlay.classList.remove('active')
+        popup.classList.add('active')
+        popupOverlay.classList.add('active')
+    } else {
+        alert('Пожалуйста, заполните Обязательные поля!');
+    }
 })
 
 
