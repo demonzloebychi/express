@@ -1022,10 +1022,18 @@
 
 
 .sp-times {
-    margin-top: clamp(40px, 5vw, 60px);
+
+
+    margin-top: clamp(40px, 6vw, 80px);
     margin-bottom: clamp(80px, 14vw, 180px);
 }
+.sp-times__wrapper {
+    border-top: 1px solid #d9d9d9;
+    padding-top: clamp(40px, 5vw, 60px);
+}
 .sp-times__header {
+
+
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -1080,27 +1088,33 @@
 .map-sp-times {
     background: #3D3D3D;
     padding: clamp(15px, 2.3vw, 30px);
+    padding-block: clamp(15px, 4vw, 70px);
     border-radius: 30px;
 }
 .map-sp-times__wrapper {
+
+
 }
 .map-sp-times__list {
-    column-count: 2;
-    gap: clamp(15px, 3vw, 50px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* column-count: 2; */
+    align-items: center;
+    column-gap: clamp(15px, 3vw, 50px);
+    row-gap: clamp(27px, 5vw, 85px);
 }
 .map-sp-times__item {
 }
 .item-map-sp-times {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
     align-items: center;
     gap: clamp(36px, 6vw, 102px);
-    margin-bottom: clamp(27px, 5vw, 85px);
 }
 .item-map-sp-times__img {
     /* background: #8168F0;
     padding: 20px;
-    border-radius: 20px;
-    height: 100%; */
+    border-radius: 20px; */
 }
 .item-map-sp-times__info {
     display: flex;
@@ -1119,8 +1133,12 @@
 
 @media (max-width:768px) {
     .map-sp-times__list {
-    column-count: 1;
-}
+        /* column-count: 1; */
+        grid-template-columns: 1fr;
+    }
+    .item-map-sp-times {
+        align-items: start;
+    }
     .item-map-sp-times__img svg{
         width: 40px;
     }
