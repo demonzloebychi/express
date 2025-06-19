@@ -196,6 +196,9 @@
 
 .sp-how-work {
     z-index: 1 !important;
+    margin-top: clamp(40px, 5vw, 65px) !important;
+
+  
 }
 
 .sp-how-work__wrapper {
@@ -204,7 +207,7 @@
 
 
 .sp-how-work__top {
-    margin-bottom: -110px;
+    margin-bottom: -190px;
 }
 
 
@@ -672,7 +675,7 @@
     list-style-type: none;
         .details {
             background-color: #1d1d1d;
-            border: 1px solid transparent;
+            border: 1px solid #5E5E5E;
             border-radius: 15px;
             width: 60%;
             transition: all .3s;
@@ -1044,6 +1047,7 @@
 .sp-times__title {
 }
 .sp-times__dates {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -1087,7 +1091,8 @@
 }
 .map-sp-times {
     background: #3D3D3D;
-    padding: clamp(15px, 2.3vw, 30px);
+    /* padding: clamp(15px, 2.3vw, 30px); */
+    padding-inline: clamp(20px, 3vw, 45px);
     padding-block: clamp(15px, 4vw, 70px);
     border-radius: 30px;
 }
@@ -1109,7 +1114,8 @@
     display: grid;
     grid-template-columns: 1fr 7fr;
     align-items: center;
-    gap: clamp(36px, 6vw, 102px);
+    gap: clamp(30px, 4.5vw, 60px);
+    /* gap: clamp(36px, 6vw, 102px); */
 }
 .item-map-sp-times__img {
     /* background: #8168F0;
