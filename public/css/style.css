@@ -3898,9 +3898,11 @@ button:disabled {
   grid-template-columns: 1fr 1fr 1fr;
   margin-inline: 210px;
 }
+
+
 .tech-price .tp-card {
-  height: 23.7vw;
-  padding: clamp(40px, 4vw, 65px);
+  aspect-ratio: 1 / 1;
+  padding: clamp(35px, 3vw, 65px);
   border-radius: 50%;
   border: 1px solid rgb(48, 48, 48);
   display: -webkit-box;
@@ -3975,11 +3977,11 @@ button:disabled {
   text-transform: uppercase;
 }
 
-@media (max-width: 1180px) {
+/* @media (max-width: 1180px) {
   .tech-price .tp-card {
     height: 25vw;
   }
-}
+} */
 @media (max-width: 980px) {
   .tech-price .tech-price__cards {
     margin-top: 70px;
@@ -3994,9 +3996,9 @@ button:disabled {
     margin-inline: 0px;
     margin-top: 0px;
   }
-  .tech-price .tp-card {
+  /* .tech-price .tp-card {
     height: 47vw;
-  }
+  } */
   .tech-price .tp-card:not(:first-child) {
     margin-left: 0px;
   }

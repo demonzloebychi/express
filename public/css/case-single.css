@@ -1,0 +1,123 @@
+.csb {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 40px);
+}
+@media (max-width: 768px) {
+  .csb {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-single-main__wrapper {
+  padding-block: clamp(20px, 3vw, 40px);
+
+  border-block: 1px solid #d9d9d9;
+}
+.case-single-main__title {
+  font-family: "Geologica", sans-serif;
+  font-weight: 600;
+  font-size: clamp(24px, 3vw, 48px);
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--main-font);
+}
+
+.case-single-main__tags {
+  padding-bottom: 20px;
+  a {
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: clamp(16px, 2vw, 32px);
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-font);
+
+    padding: 10px 15px;
+    background: #525252;
+    border-radius: 5px;
+
+    display: inline-block;
+  }
+}
+
+.case-single-main__breadcrumbs {
+  padding-bottom: clamp(20px, 4vw, 70px);
+  a {
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    font-size: clamp(13px, 1.4vw, 16px);
+    line-height: 110%;
+    color: var(--main-font);
+  }
+}
+
+.case-single-main__breadcrumbs a:last-child {
+  color: var(--contrast-color);
+}
+
+.case-single-info {
+}
+.container {
+}
+.csb {
+}
+.case-single-info__wrappper {
+  padding-block: clamp(40px, 6vw, 80px);
+  border-bottom: 1px solid #d9d9d9;
+
+  dt {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: clamp(12px, 1.4vw, 16px);
+    line-height: 120%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  dd {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: clamp(16px, 2vw, 32px);
+    line-height: 120%;
+    color: var(--main-font);
+  }
+  a {
+    color: var(--contrast-color);
+  }
+}
+
+.case-single-info__left {
+}
+.case-single-info__site {
+}
+.case-single-info__theme {
+}
+.case-single-info__region {
+}
+.case-single-info__task {
+}
+.case-single-info__list {
+  padding-top: 30px;
+  border-top: 1px solid rgba(217, 217, 217, 0.5);
+}
+.case-single-info__item {
+}
+.title-h2 {
+}
+.case-result-block__title {
+}
+.text {
+}
+.case-result-block__text {
+}
+.case-single-info__right {
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
