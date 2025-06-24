@@ -1,7 +1,7 @@
-const swiper = new Swiper('.swiper', {
+const csirSwiper = new Swiper('.csir-swiper', {
   // Optional parameters
-  direction: 'vertical',
-  loop: true,
+  // direction: 'vertical',
+  // loop: true,
 
   // If we need pagination
 //   pagination: {
@@ -10,9 +10,10 @@ const swiper = new Swiper('.swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.csir-swiper-button-next',
+    prevEl: '.csir-swiper-button-prev',
   },
+   spaceBetween: 20,
 
   // And if we need scrollbar
 //   scrollbar: {

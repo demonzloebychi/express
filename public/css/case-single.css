@@ -72,6 +72,7 @@
     font-size: clamp(12px, 1.4vw, 16px);
     line-height: 120%;
     color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
   }
   dd {
     font-family: "Manrope", sans-serif;
@@ -82,7 +83,14 @@
   }
   a {
     color: var(--contrast-color);
+    text-decoration: underline;
   }
+}
+
+.case-single-info__information {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.5vw, 30px);
 }
 
 .case-single-info__left {
@@ -94,30 +102,303 @@
 .case-single-info__region {
 }
 .case-single-info__task {
+  padding-bottom: clamp(1px, 2vw, 50px);
+  dd {
+    font-size: clamp(16px, 2vw, 24px);
+  }
 }
 .case-single-info__list {
-  padding-top: 30px;
   border-top: 1px solid rgba(217, 217, 217, 0.5);
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+.case-single-info__item {
+  padding-top: 30px;
+  flex: 1 1 0;
+}
+.item-case-single-info__title {
+  color: var(--contrast-color);
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.item-case-single-info__description {
+  font-weight: 500;
+}
+.csir-swiper {
+  max-width: 860px;
+  width: 100%;
+
+  height: auto;
+
+  margin: 0 auto;
+}
+.csir-swiper-wrapper {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* padding-inline: clamp(32px, 4vw, 80px);
+  padding-block: clamp(26px, 3vw, 66px); */
+}
+.csir-swiper-slide {
+  width: 100%;
+  height: auto;
+  background: #525252;
+  border-radius: 15px;
+
+  img {
+    max-width: 90%; /* картинка растягивается по слайду */
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    padding: 66px 80px;
+    box-sizing: content-box;
+  }
+}
+.swiper-button-prev {
+  width: 40px !important;
+  height: 40px !important;
+  margin-left: 5px;
+}
+.swiper-button-next {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 5px;
+}
+
+@media (max-width: 1440px) {
+  .csir-swiper-slide img {
+    padding: 26px 32px;
+  }
+
+  .csir-swiper {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .case-single-info__wrappper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-single-info__list {
+    display: none;
+  }
+  .csir-swiper {
+    max-width: 90vw;
+    width: 100%;
+
+    padding-bottom: 100px !important;
+  }
+  .csir-swiper-slide {
+    width: 90vw;
+  }
+  .csir-swiper-button-prev,
+  .csir-swiper-button-next {
+    top: 90% !important;
+  }
+  .csir-swiper-button-prev {
+    left: 50% !important;
+    transform: translateX(-130%);
+  }
+  .csir-swiper-button-next {
+    right: 50% !important;
+    transform: translateX(130%);
+  }
+}
+
+/* case-single-connect */
+
+.case-single-connect {
+  margin-top: clamp(60px, 7vw, 80px);
+  margin-bottom: clamp(60px, 10vw, 160px);
+}
+
+.case-single-connect__right {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
+  background: #1d1d1d;
+  border-radius: 15px;
+  padding: clamp(10px, 2vw, 30px);
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 1.7vw, 20px);
+}
+
+/* Чипсы формы  */
+
+.form-chips__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(15px, 1.7vw, 20px);
+  justify-content: start;
+
+  margin-bottom: clamp(15px, 1.7vw, 20px) !important;
+}
+.form-chips__list input {
+  background-color: transparent !important;
+}
+.form-chip-radio {
+  appearance: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-chips__item {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 110%;
+  text-transform: uppercase;
+  padding-block: 12.5px;
+  width: clamp(155px, 17vw, 185px);
+
+  display: flex;
+  justify-content: center;
+
+  color: var(--main-font);
+  background-color: transparent;
+  border: 1px solid var(--main-font);
+  padding: 0.54rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 100ms ease-in-out;
+}
+
+.form-chips__item:has(input:checked) {
+  border: 1px solid var(--contrast-color);
+  color: var(--contrast-color);
+}
+
+.form-chips__item:has(input:disabled) {
+  background-color: #b7b8ee;
+  color: var(--main-bg-color);
+}
+
+@media (max-width: 1200px) {
+  .case-single-connect__wrappper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-chips__list {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: center;
+  }
+}
+
+.case-single-done {
+}
+.container {
+}
+.case-single-done__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 40px);
+
+}
+.case-single-done__title {
+}
+.case-single-done__nav {
+}
+.nav-case-single-done {
+  display: flex;
+  gap: clamp(15px, 1.7vw, 20px);
+}
+
+.nav-case-single-done__btn {
+  background: transparent;
+  padding-block: 12.5px;
+  width: clamp(155px, 17vw, 185px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--main-font);
+
+  border: 1px solid var(--main-font);
+  border-radius: 8px;
+}
+.nav-case-single-done__btn.is-active {
+  color: var(--contrast-color);
+  border: 1px solid var(--contrast-color);
+}
+
+.case-single-done__info {
+}
+.info-case-single-done {
+  border-radius: 15px;
+  background: #1d1d1d;
+
+  padding-inline: clamp(10px, 3vw, 40px);
+  padding-block: clamp(30px, 4vw, 60px);
+
+
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: clamp(30px, 5vw, 78px);
+}
+.info-case-single-done__left {
+}
+.info-case-single-done__right {
+}
+
+.info-case-single-done__title {
+  margin-bottom: 30px;
+}
+.info-case-single-done__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 140%;
+  color: #e2e2e2;
+
+    margin-bottom: 55px;
+
+}
+.case-single-info__list {
 }
 .case-single-info__item {
 }
-.title-h2 {
+.item-case-single-info {
 }
-.case-result-block__title {
+.item-case-single-info__title {
 }
-.text {
+.xs-text {
 }
-.case-result-block__text {
+.item-case-single-info__description {
 }
-.case-single-info__right {
+
+/* tabs */
+
+.case-single-done {
+  margin-top: 300px;
+  margin-bottom: 200px;
 }
-.swiper {
+
+.body-tabs {
+  display: none;
 }
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
+.body-tabs.is-active {
+  display: grid;
 }
