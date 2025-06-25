@@ -197,6 +197,13 @@ body {
   font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.5;
 }
+.xxs-text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 140%;
+  color: var(--second-light-color);
+}
 
 body.lock {
   overflow: hidden;
