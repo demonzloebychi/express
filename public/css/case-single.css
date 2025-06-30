@@ -64,7 +64,7 @@
   color: var(--contrast-color);
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .case-single-main__wrapper {
     flex-direction: column;
   }
@@ -142,6 +142,7 @@
 }
 .item-case-single-info__description {
   font-weight: 500;
+  line-height: 120%;
 }
 .csir-swiper {
   max-width: 860px;
@@ -226,6 +227,12 @@
     transform: translateX(130%);
   }
 }
+@media (max-width: 500px) {
+  .csir-swiper-button-prev,
+  .csir-swiper-button-next {
+    top: 85% !important;
+  }
+}
 
 /* case-single-connect */
 
@@ -233,7 +240,11 @@
   margin-top: clamp(60px, 7vw, 80px);
   margin-bottom: clamp(60px, 10vw, 160px);
 }
-
+.case-single-connect__left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vw, 30px);
+}
 .case-single-connect__right {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
   background: var(--third-dark-color);
@@ -243,6 +254,10 @@
   display: flex;
   flex-direction: column;
   gap: clamp(15px, 1.7vw, 20px);
+}
+.left-case-single-connect__title,
+.right-case-single-connect__title {
+  font-weight: 400;
 }
 
 /* Чипсы формы  */
@@ -286,6 +301,14 @@
   border-radius: 0.5rem;
   position: relative;
   transition: all 100ms ease-in-out;
+}
+.form-chip-radio {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .form-chips__item:hover {
+    border-bottom: 1px solid var(--contrast-color);
+  }
 }
 
 .form-chips__item:has(input:checked) {
@@ -332,6 +355,17 @@
   gap: clamp(15px, 1.7vw, 20px);
 }
 
+@media (max-width: 768px) {
+  .nav-case-single-done {
+  flex-wrap: wrap;
+}
+.nav-case-single-done__btn {
+flex: 1 1 0;
+    min-width: 155px;
+}
+
+}
+
 .nav-case-single-done__btn {
   background: transparent;
   padding-block: 12.5px;
@@ -350,7 +384,15 @@
 
   border: 1px solid var(--main-font);
   border-radius: 8px;
+  cursor: pointer;
 }
+
+@media (hover: hover) {
+  .nav-case-single-done__btn:hover {
+    border-bottom: 1px solid var(--contrast-color);
+  }
+}
+
 .nav-case-single-done__btn.is-active {
   color: var(--contrast-color);
   border: 1px solid var(--contrast-color);
@@ -478,6 +520,11 @@
   padding-block: clamp(27px, 3.5vw, 56px);
   background: var(--third-dark-color);
   border-radius: 30px;
+
+
+  display: flex;
+    justify-content: center;
+    width: 100%;
 
   img {
     max-width: 353px;

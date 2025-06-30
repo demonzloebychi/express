@@ -7011,6 +7011,9 @@ button:disabled {
   .phw__img {
     margin-top: -200px;
   }
+  .phw__view {
+    width: fit-content;
+  }
 }
 .d-n {
   display: none;
