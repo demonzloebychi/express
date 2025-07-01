@@ -412,6 +412,8 @@ flex: 1 1 0;
   display: flex;
   /* grid-template-columns: 40% 1fr; */
   gap: clamp(30px, 5vw, 78px);
+
+ 
 }
 .info-case-single-done__left {
   width: 40%;
@@ -440,6 +442,16 @@ flex: 1 1 0;
 .xs-text {
 }
 .item-case-single-info__description {
+}
+
+
+@media (max-width:550px) {
+  .info-case-single-done {
+    .case-single-info__item {
+        max-width: 155px;
+      }  
+  }
+   
 }
 
 /* tabs */
