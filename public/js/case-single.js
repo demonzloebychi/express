@@ -54,25 +54,25 @@ const moreCaseSwiper = new Swiper('.more-case-swiper', {
   // loop: true,
 
   // If we need pagination
-  pagination: {
-    el: '.more-case-swiper-pagination',
-  },
+  // pagination: {
+  //   el: '.more-case-swiper-pagination',
+  // },
 
   // Navigation arrows
   navigation: {
     nextEl: '.more-case-swiper-button-next',
     prevEl: '.more-case-swiper-button-prev',
   },
-   spaceBetween: 20,
+   spaceBetween: 40,
 
    slidesPerView: 1, // по умолчанию на десктопе
   breakpoints: {
-    992: { // на планшетах и выше
+    993: { // на планшетах и выше
       slidesPerView: 2,
     },
     0: { // на мобильных
       slidesPerView: 1.1, // или 1.15 — подберите под свой дизайн
-      spaceBetween: 16,   // или другой нужный отступ
+      spaceBetween: 20,   // или другой нужный отступ
     }
   }
 });
