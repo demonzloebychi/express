@@ -283,6 +283,8 @@
 }
 
 .form-chips__item {
+  flex: 1 1 0;
+  min-width: 155px;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 14px;
