@@ -466,14 +466,7 @@
 
 
 
-.case-single h1 {
-    font-size: clamp(34px, 7vw, 76px) !important;
-}
 
-.case-single h2 {
-    font-size: clamp(30px, 4vw, 64px) !important;
-
-}
 
 .case-single h1 {
     font-size: clamp(32px, 4.5vw, 64px) !important;
