@@ -1,4 +1,4 @@
-const header = document.querySelector('.header');
+const header = document.querySelector('.a-header');
 const scrollChange = 200; // Порог прокрутки
 
 window.addEventListener('scroll', function() {
