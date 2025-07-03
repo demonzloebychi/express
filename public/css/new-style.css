@@ -4,6 +4,13 @@
 
 @import url(seo-page.css);
 
+@import url(faq.css);
+
+@import url(sale.css);
+
+
+
+
 
 .case-link__wrapper {
     display: flex;

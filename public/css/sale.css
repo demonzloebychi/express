@@ -1,0 +1,63 @@
+
+.sp-sale {
+}
+.container {
+}
+.title-h2 {
+}
+.sp-sale__title {
+}
+.sp-sale__wrapper {
+    padding-top: clamp(20px, 3vw, 40px);
+    margin-top: 40px;
+    border-top: 1px solid var(--main-font);
+
+}
+.sp-sale__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 44px);
+}
+.sp-sale__item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background: #303030;
+
+    border: 1px solid var(--contrast-color);
+    border-radius: 15px;
+
+    min-width: 320px;
+    padding-inline: 20px;
+    padding-block: clamp(20px, 2.3vw, 30px);
+}
+.item-sp-sale {
+}
+.item-sp-sale__title {
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    font-size: clamp(24px, 3vw, 48px);
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+}
+.item-sp-sale__text {
+    margin-top: auto;
+    font-family: "Geologica", sans-serif;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 28px);
+    line-height: 110%;
+    color: var(--main-font);
+}
+
+
+@media (max-width: 768px) {
+    .sp-sale__wrapper {
+        margin-top: 0px;
+        border-top: 0px solid var(--main-font);
+
+    }
+}
+
