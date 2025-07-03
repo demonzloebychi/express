@@ -84,6 +84,14 @@ max-width: 558px;
   line-height: 110%;
   text-transform: uppercase;
   color: var(--second-dark-color);
+  transition: all .2s ease-in-out;
+}
+
+@media (hover:hover) {
+  .more-case-slide__btn:hover {
+    background: var(--contrast-color);
+
+  }
 }
 
 
@@ -96,6 +104,7 @@ max-width: 558px;
     background: var(--contrast-color) !important;
   }
 } */
+
 
 
 

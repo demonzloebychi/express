@@ -309,7 +309,7 @@
 }
 @media (hover: hover) {
   .form-chips__item:hover {
-    border-bottom: 1px solid var(--contrast-color);
+    border: 1px solid var(--contrast-color);
   }
 }
 
@@ -354,6 +354,7 @@
 }
 .nav-case-single-done {
   display: flex;
+  justify-content: center;
   gap: clamp(15px, 1.7vw, 20px);
 }
 
@@ -391,7 +392,7 @@ flex: 1 1 0;
 
 @media (hover: hover) {
   .nav-case-single-done__btn:hover {
-    border-bottom: 1px solid var(--contrast-color);
+    border: 1px solid var(--contrast-color);
   }
 }
 

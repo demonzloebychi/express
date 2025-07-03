@@ -1101,8 +1101,7 @@
 }
 .map-sp-times {
     background: #3D3D3D;
-    /* padding: clamp(15px, 2.3vw, 30px); */
-    padding-inline: clamp(20px, 3vw, 45px);
+    padding-inline: clamp(25px, 3.5vw, 50px);
     padding-block: clamp(15px, 4vw, 70px);
     border-radius: 30px;
 }
@@ -1124,13 +1123,14 @@
     display: grid;
     grid-template-columns: 1fr 7fr;
     align-items: center;
-    gap: clamp(30px, 4.5vw, 60px);
-    /* gap: clamp(36px, 6vw, 102px); */
+    gap: clamp(25px, 3.5vw, 50px);
 }
 .item-map-sp-times__img {
     /* background: #8168F0;
     padding: 20px;
     border-radius: 20px; */
+    display: flex;
+    justify-content: center;
 }
 .item-map-sp-times__info {
     display: flex;
