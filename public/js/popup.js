@@ -99,6 +99,7 @@ const popupCall = document.querySelector('#popup-call');
 const popupCallBtn = document.querySelectorAll('.popup-call-btn');
 const popupCallSubmit = document.querySelector('#popup-call__submit')
 const popupCallOverlay = document.querySelector('.popup-call__overlay')
+const popupCallClose = document.querySelector('.popup-call__close')
 
 const popupCallPhone = document.querySelectorAll('.popup-call__phone')
 
@@ -113,7 +114,7 @@ popupCallBtn.forEach(btn => {
  
 
 popupCallSubmit.addEventListener('click', function(e) {
-    e.preventDefault(); 
+    // e.preventDefault(); 
     // highlightEmptyFields();
     // popupCall.classList.remove('active')
     //     popupCallOverlay.classList.remove('active')
@@ -136,7 +137,7 @@ const closePopupCall = () => {
     popupCall.classList.remove('active')
     popupCallOverlay.classList.remove('active')
 }
-popupClose.addEventListener('click', closePopupCall)
+popupCallClose.addEventListener('click', closePopupCall)
 
 
 
