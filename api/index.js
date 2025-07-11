@@ -3,24 +3,15 @@ require('dotenv').config();
 const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
-
 const fetch = require('node-fetch');
 const serverless = require('serverless-http');
 
 const app = express();
 
-
-// const nodemailer = require('nodemailer');
-
-
-
-
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-app.use(express.json()); // Чтобы сервер мог принимать JSON в теле POST-запросов
-
-
+app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 const viewsDir = path.join(__dirname, '..', 'views');
@@ -37,7 +28,6 @@ async function loadBlocks() {
       blocks[blockName] = content;
     }
   }
-
   return blocks;
 }
 
@@ -67,12 +57,10 @@ async function createRoutes(app) {
     const routePath = name === 'index' ? '/' : `/${name}`;
     const htmlRoutePath = routePath + '.html';
 
-    // Редирект с /page.html на /page
     app.get(htmlRoutePath, (req, res) => {
       res.redirect(301, routePath);
     });
 
-    // Основной маршрут без расширения
     app.get(routePath, async (req, res) => {
       try {
         const html = await renderPage(name);
@@ -85,7 +73,10 @@ async function createRoutes(app) {
   }
 }
 
-
+// Создаём маршруты
+(async () => {
+  await createRoutes(app);
+})();
 
 app.post('/api/call', async (req, res) => {
   const { name, phone, comment, site, policy } = req.body;
@@ -127,47 +118,5 @@ app.post('/api/call', async (req, res) => {
   }
 });
 
-// const transporter = nodemailer.createTransport({
-//   host: 'smtp.mail.ru',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: 'nikolaislnkv@mail.ru',
-//     pass: 'BKx2qdiyt3hZF6zArxgp'
-//   }
-// });
-
-// app.post('/api/call', async (req, res) => {
-//   const { name, phone, comment, site, policy } = req.body;
-
-//   if (!phone || !policy) {
-//     return res.status(400).json({ message: 'Телефон и согласие с политикой обязательны' });
-//   }
-
-//   const mailOptions = {
-//     from: 'nikolaislnkv@mail.ru',
-//     to: 'nikolaislnkv@mail.ru',
-//     subject: 'Новая заявка с сайта',
-//     text: `
-// Имя: ${name || 'Не указано'}
-// Телефон: ${phone}
-// Комментарий: ${comment || 'Не указан'}
-// Сайт: ${site || 'Не указан'}
-//     `
-//   };
-
-//   try {
-//     await transporter.sendMail(mailOptions);
-//     res.json({ message: 'Заявка успешно отправлена' });
-//   } catch (error) {
-//     console.error('Ошибка отправки письма:', error);
-//     res.status(500).json({ message: 'Ошибка сервера при отправке письма' });
-//   }
-// });
-
-
-(async () => {
-  await createRoutes(app);
-})();
-
-module.exports = app;
+// Экспортируем обработчик для Vercel
+module.exports.handler = serverless(app);
