@@ -10,6 +10,8 @@ const app = express();
 // const nodemailer = require('nodemailer');
 
 const fetch = require('node-fetch');
+const serverless = require('serverless-http');
+
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -90,7 +92,6 @@ app.post('/api/call', async (req, res) => {
     return res.status(400).json({ message: 'Телефон и согласие с политикой обязательны' });
   }
 
-  // Формируем текст сообщения для Telegram
   const message = `
 Новая заявка с сайта:
 Имя: ${name || 'Не указано'}
