@@ -4,13 +4,15 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 
+const fetch = require('node-fetch');
+const serverless = require('serverless-http');
+
 const app = express();
 
 
 // const nodemailer = require('nodemailer');
 
-const fetch = require('node-fetch');
-const serverless = require('serverless-http');
+
 
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
