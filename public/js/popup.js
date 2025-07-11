@@ -103,6 +103,65 @@ const popupCallClose = document.querySelector('.popup-call__close')
 
 const popupCallPhone = document.querySelectorAll('.popup-call__phone')
 
+const popupCallForm = document.querySelector('#popup-call-form');
+
+
+
+popupCallForm.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  if(!checkCallFormFields()) {
+    alert('Пожалуйста, заполните Обязательные поля!');
+    return;
+  }
+
+  const formData = new FormData(popupCallForm);
+
+  const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value.trim();
+    });
+
+
+
+
+    try {
+        const response = await fetch('/api/call', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            // alert('Спасибо! Ваша заявка отправлена.');
+            popupCallForm.reset();
+
+            popupCallForm.closest('.popup-call__overlay').classList.remove('active');
+            popupCallForm.closest('.popup').classList.remove('active');
+
+            // Здесь можно открыть другой попап или показать сообщение
+            popup.classList.add('active');
+            popupOverlay.classList.add('active');
+        } else {
+            const result = await response.json();
+            alert(result.message || 'Ошибка при отправке формы');
+        }
+    } catch (error) {
+        alert('Ошибка соединения с сервером');
+        console.error(error);
+    }
+
+
+
+
+
+
+
+
+
+
+})
+
 popupCallBtn.forEach(btn => {
     btn.addEventListener('click', function() {
         popupCall.classList.toggle('active');
@@ -113,24 +172,24 @@ popupCallBtn.forEach(btn => {
 
  
 
-popupCallSubmit.addEventListener('click', function(e) {
-    // e.preventDefault(); 
-    // highlightEmptyFields();
-    // popupCall.classList.remove('active')
-    //     popupCallOverlay.classList.remove('active')
-    //     popup.classList.add('active')
-    //     popupOverlay.classList.add('active')
+// popupCallSubmit.addEventListener('click', function(e) {
+//     e.preventDefault(); 
+//     // highlightEmptyFields();
+//     // popupCall.classList.remove('active')
+//     //     popupCallOverlay.classList.remove('active')
+//     //     popup.classList.add('active')
+//     //     popupOverlay.classList.add('active')
 
 
-    if (checkCallFormFields()) {
-        popupCall.classList.remove('active')
-        popupCallOverlay.classList.remove('active')
-        popup.classList.add('active')
-        popupOverlay.classList.add('active')
-    } else {
-        alert('Пожалуйста, заполните Обязательные поля!');
-    }
-})
+//     if (checkCallFormFields()) {
+//         popupCall.classList.remove('active')
+//         popupCallOverlay.classList.remove('active')
+//         popup.classList.add('active')
+//         popupOverlay.classList.add('active')
+//     } else {
+//         alert('Пожалуйста, заполните Обязательные поля!');
+//     }
+// })
 
 
 const closePopupCall = () => {

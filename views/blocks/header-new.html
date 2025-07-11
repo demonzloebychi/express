@@ -436,18 +436,18 @@
         Наш менеджер свяжется с вами в ближайшее время!
     </p>
 
-    <form action="" class="popup-call ">
-        <input type="name" class="input input__name popup-call__name"  placeholder="Ваше имя">
+    <form action="" class="popup-call " id="popup-call-form">
+        <input name="name" type="name" class="input input__name popup-call__name"  placeholder="Ваше имя">
 
-        <input type="phone" class="input input__phone popup-call__phone"  placeholder="Номер телефона" maxlength="18" required>
+        <input name="phone" type="phone" class="input input__phone popup-call__phone"  placeholder="Номер телефона" maxlength="18" required>
 
-        <input type="text" class="input input__text" placeholder="Комментарий">
+        <input name="comment" type="text" class="input input__text" placeholder="Комментарий">
 
-        <input type="site" class="input input__site popup-call__site"  placeholder="Адрес сайта">
+        <input name="site" type="site" class="input input__site popup-call__site"  placeholder="Адрес сайта">
 
   
         <label for="checkbox" class="checkbox-label">
-            <input type="checkbox" class="checkbox" required>
+            <input name="policy" type="checkbox" class="checkbox" required>
             Я согласен с политикой обработки персональных данных
         </label>
 
@@ -458,7 +458,7 @@
 
 
 
-</div>
+ </div>
 </div>
 
 
