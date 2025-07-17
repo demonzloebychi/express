@@ -688,8 +688,8 @@
     border-radius: 50%;
     border: 1px solid var(--contrast-color);
     font-size: clamp(14px, 2vw, 28px);
-    width: clamp(40px, 6vw, 80px);
-    height: clamp(40px, 6vw, 80px);
+    min-width: clamp(40px, 6vw, 80px);
+    min-height: clamp(40px, 6vw, 80px);
     line-height: 110%;
     font-weight: 600;
     font-family: "Manrope", sans-serif;

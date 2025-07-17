@@ -13,9 +13,60 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
 const app = express();
 const port = 3000;
 
+
+
+
+
+
+
+// Подключение к MongoDB (замените строку на вашу)
+mongoose.connect('mongodb://localhost:27017/myapp', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => console.log('MongoDB подключен'))
+  .catch(err => console.error(err));
+
+// Мидлвар для парсинга JSON тела запросов
+app.use(bodyParser.json());
+
+
+const bcrypt = require('bcryptjs');
+const User = require('./models/User');
+
+app.post('/register', async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+
+    // Проверка обязательных полей
+    if (!username || !email || !password) {
+      return res.status(400).json({ message: 'Все поля обязательны' });
+    }
+
+    // Проверка, что пользователь с таким username или email не существует
+    const candidate = await User.findOne({ $or: [{ username }, { email }] });
+    if (candidate) {
+      return res.status(400).json({ message: 'Пользователь с таким логином или email уже существует' });
+    }
+
+    // Хеширование пароля
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Создание и сохранение пользователя
+    const user = new User({ username, email, password: hashedPassword });
+    await user.save();
+
+    res.status(201).json({ message: 'Пользователь успешно зарегистрирован' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Ошибка сервера' });
+  }
+});
 
 
 // const nodemailer = require('nodemailer');
