@@ -54,6 +54,8 @@
 
 
 .a-footer__menu-title {
+    display: block;
+    cursor: pointer;
     font-family: "Geologica", sans-serif;
     font-weight: 600;
     font-size: clamp(15px, 2vw, 20px);
