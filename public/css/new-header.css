@@ -47,6 +47,8 @@
     line-height: 120%;
     color: var(--main-font);
     cursor: pointer;
+
+    white-space: nowrap;
 }
 
 .a-header__phone_blocks {

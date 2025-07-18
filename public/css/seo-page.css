@@ -250,11 +250,16 @@
     line-height: 140%;
     color: var(--main-font);
 }
+
 .sp-how-work__btn {
-    margin-top: 35px;
+    margin-top: 35px !important;
     position: relative;
     z-index: 10;
-    
+    width: fit-content;
+    padding-inline: 30px;
+    text-transform: uppercase;
+    color: var(--main-background);
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

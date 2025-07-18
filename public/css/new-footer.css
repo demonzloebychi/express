@@ -54,6 +54,7 @@
 
 
 .a-footer__menu-title {
+    white-space: nowrap;
     display: block;
     cursor: pointer;
     font-family: "Geologica", sans-serif;
@@ -118,8 +119,17 @@
     column-gap: clamp(21px, 2.5vw, 46px);
 }
 
+@media (max-width: 1550px) {
+    .a-footer__column .a-header__phone-info {
+        min-width: 200px;
+        svg {
+            display: none;
+        }
+    }
+}
 
-@media (max-width: 768px) {
+
+@media (max-width: 1170px) {
     .a-footer .a-footer__wrapper {
         gap: 25px;
         flex-direction: column;
