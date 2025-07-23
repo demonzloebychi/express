@@ -40,6 +40,7 @@
     display: flex;
     gap: 15px;
 }
+
 .a-header__phone {
     font-family: "Geologica", sans-serif;
     font-weight: 500;
@@ -47,7 +48,6 @@
     line-height: 120%;
     color: var(--main-font);
     cursor: pointer;
-
     white-space: nowrap;
 }
 

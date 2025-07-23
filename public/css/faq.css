@@ -92,8 +92,8 @@
             
 
         .details .summary svg {
-            width: clamp(26px, 3vw, 46px);
-            height: clamp(26px, 3vw, 46px);
+            min-width: clamp(26px, 3vw, 46px);
+            min-height: clamp(26px, 3vw, 46px);
             transition: all .3s ease-in-out;
             rotate: 0deg;
         }
