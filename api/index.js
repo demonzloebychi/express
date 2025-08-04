@@ -10,7 +10,6 @@ const serverless = require('serverless-http');
 const app = express();
 
 
-// const nodemailer = require('nodemailer');
 
 
 
@@ -126,6 +125,8 @@ app.post('/api/call', async (req, res) => {
     res.status(500).json({ message: 'Ошибка сервера при отправке сообщения в Telegram' });
   }
 });
+
+
 
 // const transporter = nodemailer.createTransport({
 //   host: 'smtp.mail.ru',

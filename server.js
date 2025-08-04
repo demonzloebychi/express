@@ -1,11 +1,3 @@
-// server.js для локального запуска
-// const app = require('./api/index');
-
-// const port = 3000;
-// app.listen(port, () => {
-//   console.log(`Сервер запущен на http://localhost:${port}`);
-// });
-
 require('dotenv').config();
 
 
@@ -13,7 +5,6 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -23,54 +14,15 @@ const port = 3000;
 
 
 
-
-
-// Подключение к MongoDB (замените строку на вашу)
-mongoose.connect('mongodb://localhost:27017/myapp', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log('MongoDB подключен'))
-  .catch(err => console.error(err));
-
 // Мидлвар для парсинга JSON тела запросов
 app.use(bodyParser.json());
 
 
-const bcrypt = require('bcryptjs');
-const User = require('./models/User');
 
-app.post('/register', async (req, res) => {
-  try {
-    const { username, email, password } = req.body;
 
-    // Проверка обязательных полей
-    if (!username || !email || !password) {
-      return res.status(400).json({ message: 'Все поля обязательны' });
-    }
-
-    // Проверка, что пользователь с таким username или email не существует
-    const candidate = await User.findOne({ $or: [{ username }, { email }] });
-    if (candidate) {
-      return res.status(400).json({ message: 'Пользователь с таким логином или email уже существует' });
-    }
-
-    // Хеширование пароля
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Создание и сохранение пользователя
-    const user = new User({ username, email, password: hashedPassword });
-    await user.save();
-
-    res.status(201).json({ message: 'Пользователь успешно зарегистрирован' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Ошибка сервера' });
-  }
-});
 
 
 // const nodemailer = require('nodemailer');
-const fetch = require('node-fetch');
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -185,45 +137,6 @@ app.post('/api/call', async (req, res) => {
 });
 
 
-
-
-// const transporter = nodemailer.createTransport({
-//   host: 'smtp.mail.ru',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: 'nikolaislnkv@mail.ru',
-//     pass: 'PNJ5HSyymxhbhTJLhryZ'
-//   }
-// });
-
-// app.post('/api/call', async (req, res) => {
-//   const { name, phone, comment, site, policy } = req.body;
-
-//   if (!phone || !policy) {
-//     return res.status(400).json({ message: 'Телефон и согласие с политикой обязательны' });
-//   }
-
-//   const mailOptions = {
-//     from: 'nikolaislnkv@mail.ru',
-//     to: 'nikolaislnkv@mail.ru',
-//     subject: 'Новая заявка с сайта',
-//     text: `
-// Имя: ${name || 'Не указано'}
-// Телефон: ${phone}
-// Комментарий: ${comment || 'Не указан'}
-// Сайт: ${site || 'Не указан'}
-//     `
-//   };
-
-//   try {
-//     await transporter.sendMail(mailOptions);
-//     res.json({ message: 'Заявка успешно отправлена' });
-//   } catch (error) {
-//     console.error('Ошибка отправки письма:', error);
-//     res.status(500).json({ message: 'Ошибка сервера при отправке письма' });
-//   }
-// });
 
 
 

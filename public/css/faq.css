@@ -64,7 +64,7 @@
                 color: var(--main-font);
                 text-transform: uppercase;
             }
-            p{
+            .details-content {
                 border-radius: 0 0 15px 15px;
                 transition: all .3s;
                 padding: clamp(10px, 2vw, 30px);
@@ -76,10 +76,10 @@
                 color: #e2e2e2;
             }
         }
-        .details p {
+        .details .details-content {
             display: none;
         }
-        .details.active p {
+        .details.active .details-content {
             display: block;
         }
 
