@@ -880,6 +880,7 @@
 .sp-times__date {
 }
 .date-sp-times {
+    flex: 1 1 0;
 }
 .green-text {
 }
