@@ -1,0 +1,216 @@
+/* BLOG LISTING */
+
+.a-blog {
+  margin-top: clamp(30px, 3.5vw, 40px);
+}
+.container {
+}
+.a-blog__wrapper {
+}
+.a-blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 40px);
+  justify-content: center;
+}
+.a-blog__item {
+}
+.a-blog-item {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(15px, 2vw, 25px);
+  gap: 30px;
+  background: #1d1d1d;
+  border-radius: 20px;
+  max-width: 550px;
+  min-width: 300px;
+}
+.a-blog-item__about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.a-blog-item__img {
+}
+.a-blog-item__info {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 110%;
+  color: var(--main-font);
+}
+.a-blog-item__author {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.a-blog-item__author-img {
+}
+.a-blog-item__author-name {
+  font-weight: 700;
+}
+.a-blog-item__deep-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.a-blog-item__date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.a-blog-item__views {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.a-blog-item__title {
+  font-family: "Geologica", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--main-font);
+}
+.a-blog-item__tags {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.5vw, 30px);
+
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  color: var(--main-font);
+
+  span {
+    position: relative;
+    padding-left: 25px;
+  }
+  span:before {
+    position: absolute;
+    content: url("/img/svg/sharp.svg");
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.a-blog-item__link {
+  font-family: "Geologica", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--contrast-color);
+}
+
+.a-blog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    margin-top: 51px;
+  .pagination-item {
+    aspect-ratio: 1;
+
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 110%;
+    color: var(--main-font);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--contrast-color);
+    border-radius: 5px;
+    min-width: 37px;
+    min-height: 37px;
+    cursor: pointer;
+
+    background: transparent;
+  }
+  .pagination-item.current {
+    background: var(--contrast-color);
+    color: var(--main-background);
+  }
+}
+
+
+.blog-control {
+    margin-top: clamp(20px, 2.5vw, 30px);
+    margin-bottom: clamp(30px, 3.5vw, 40px);
+}
+.container {
+}
+.blog-control__wrapper {
+}
+.blog-tag__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    align-items: center;
+    gap: 20px;
+}
+.blog-tag__item a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+        background: transparent;
+    padding-block: 10px;
+    padding-inline: 15px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 110%;
+    color: var(--main-font);
+    border: 1px solid var(--contrast-color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.blog-tag__item a.active{
+    color: var(--main-background);
+    background: var(--contrast-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+.blog-information__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-block: clamp(20px, 2vw, 40px);
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.blog-info__title {
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: clamp(32px, 4.5vw, 64px);
+    line-height: 110%;
+    text-transform: uppercase;
+    color: var(--main-font);
+}
+
+/* ЕСЛИ ПОПРОСЯТ ДЛЯ 1440px 3 КАРТОЧКИ В СТРОКЕ */
+
+/* @media (max-width: 1440px) {
+    .a-blog-item {
+        max-width: 440px;
+    }
+} */
