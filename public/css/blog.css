@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   padding: clamp(15px, 2vw, 25px);
-  gap: 30px;
+  gap: clamp(20px, 2.5vw, 30px);
   background: #1d1d1d;
   border-radius: 20px;
   max-width: 550px;
@@ -57,20 +57,19 @@
   align-items: center;
   gap: 20px;
 }
-.a-blog-item__date {
+.a-blog-item__date,
+.a-blog-item__views,
+.a-blog-item__time,
+.a-blog-item__link {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.a-blog-item__views {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
+
 .a-blog-item__title {
   font-family: "Geologica", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 130%;
   color: var(--main-font);
 }
@@ -100,16 +99,16 @@
 .a-blog-item__link {
   font-family: "Geologica", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 130%;
   color: var(--contrast-color);
 }
 
 .a-blog-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 17px;
-    margin-top: 51px;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 30px;
   .pagination-item {
     aspect-ratio: 1;
 
@@ -137,74 +136,82 @@
   }
 }
 
-
 .blog-control {
-    margin-top: clamp(20px, 2.5vw, 30px);
-    margin-bottom: clamp(30px, 3.5vw, 40px);
+  margin-top: clamp(20px, 2.5vw, 30px);
+  margin-bottom: clamp(30px, 3.5vw, 40px);
 }
 .container {
 }
 .blog-control__wrapper {
 }
 .blog-tag__list {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  align-items: center;
+  gap: 20px;
 }
-.blog-tag__item a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.blog-tag__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-
-        background: transparent;
-    padding-block: 10px;
-    padding-inline: 15px;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-    font-family: "Geologica", sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 110%;
-    color: var(--main-font);
-    border: 1px solid var(--contrast-color);
-    border-radius: 8px;
-    cursor: pointer;
+  background: transparent;
+  padding-block: 10px;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Geologica", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 110%;
+  color: var(--main-font);
+  border: 1px solid var(--contrast-color);
+  border-radius: 8px;
+  cursor: pointer;
 }
-.blog-tag__item a.active{
-    color: var(--main-background);
-    background: var(--contrast-color);
+.blog-tag__item a.active {
+  color: var(--main-background);
+  background: var(--contrast-color);
 }
-
-
-
-
-
-
-
-
-
-
 
 .blog-information__wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding-block: clamp(20px, 2vw, 40px);
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  padding-block: clamp(20px, 2vw, 40px);
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .blog-info__title {
-    font-family: "Geologica", sans-serif;
-    font-weight: 600;
-    font-size: clamp(32px, 4.5vw, 64px);
-    line-height: 110%;
-    text-transform: uppercase;
-    color: var(--main-font);
+  font-family: "Geologica", sans-serif;
+  font-weight: 600;
+  font-size: clamp(32px, 4.5vw, 64px);
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--main-font);
+}
+
+
+
+.a-blog__load-more {
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #404040;
+
+  margin-top: 51px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--contrast-color);
+  padding-block: 16px;
+
 }
 
 /* ЕСЛИ ПОПРОСЯТ ДЛЯ 1440px 3 КАРТОЧКИ В СТРОКЕ */
@@ -214,3 +221,32 @@
         max-width: 440px;
     }
 } */
+
+@media (max-width: 768px) {
+  .blog-tag__list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .blog-tag__list::-webkit-scrollbar {
+    height: 0;
+  }
+  .blog-tag__item {
+    white-space: nowrap;
+  }
+
+  .a-blog-item__info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .a-blog-item__link {
+    svg {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
