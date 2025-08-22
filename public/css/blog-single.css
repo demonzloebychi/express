@@ -19,128 +19,238 @@
 .a-blog-single {
 }
 .a-blog-single__wrapper {
-    max-width: 1160px;
-    padding-inline: clamp(10px, 2.5vw, 40px);
-    padding-block: clamp(30px, 3.5vw, 40px);
-    background: #1d1d1d;
-    border-radius: 20px;
-
+  max-width: 1160px;
+  padding-inline: clamp(10px, 2.5vw, 40px);
+  padding-block: clamp(30px, 3.5vw, 40px);
+  background: #1d1d1d;
+  border-radius: 20px;
 }
 .a-blog-single__content {
 }
 .a-blog-single__information {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 .a-blog-single__info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-.a-blog-single__date, .a-blog-single__views, .a-blog-single__time {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.a-blog-single__date,
+.a-blog-single__views,
+.a-blog-single__time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
-    font-family: 'Geologica', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 110%;
-    color: var(--main-font);
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  color: var(--main-font);
 
-    background: #101010;
-    padding: 8px 15px;
-    border-radius: 20px;
+  background: #101010;
+  padding: 8px 15px;
+  border-radius: 20px;
 }
 .a-blog-single__social {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .a-blog-single__article {
 }
 .a-blog-single-article {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 .a-blog-single-article__title {
-    font-family: 'Geologica', sans-serif;
-    font-weight: 700;
-    font-size: clamp(20px, 3vw, 40px);
-    line-height: 140%;
-    color: var(--main-font);
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 40px);
+  line-height: 140%;
+  color: var(--main-font);
 }
 .a-blog-single-article__img {
-    margin-top: 25px;
-    img {
-        border-radius: clamp(10px, 2vw, 32px);
-        width: 100%;
-    }
+  margin-top: 25px;
+  img {
+    border-radius: clamp(10px, 2vw, 32px);
+    width: 100%;
+  }
 }
 .a-blog-single-article__content {
-    margin-top: 5px;
-    p {
-        margin-top: 20px;
+  margin-top: 5px;
+  p {
+    margin-top: 20px;
 
-        font-family: 'Manrope', sans-serif;
-        font-weight: 500;
-        font-size: clamp(13px, 1.5vw, 18px);
-        line-height: 150%;
-        color: var(--main-font);
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: clamp(13px, 1.5vw, 18px);
+    line-height: 150%;
+    color: var(--main-font);
+  }
+
+  .important {
+    margin-block: 25px;
+    padding-block: 20px;
+    padding-inline: 15px;
+    width: 100%;
+    border: 1px solid var(--contrast-color);
+    border-radius: 5px;
+    background: #101010;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: clamp(14px, 1.6vw, 18px);
+    line-height: 150%;
+    color: var(--main-font);
+  }
+
+  h2 {
+    margin-top: 35px;
+    font-family: "Geologica", sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 2.6vw, 32px);
+    line-height: 140%;
+    color: var(--main-font);
+  }
+
+  h3 {
+    margin-top: 30px;
+    font-family: "Geologica", sans-serif;
+    font-weight: 700;
+    font-size: clamp(18px, 2.4vw, 28px);
+    line-height: 140%;
+    color: var(--main-font);
+  }
+
+  ul,
+  ol {
+    li {
+      margin-top: 20px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-size: clamp(13px, 1.5vw, 18px);
+      line-height: 150%;
+      color: var(--main-font);
+    }
+  }
+
+  ol {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    counter-reset: item; /* Обнуляем счетчик */
+    > li {
+      counter-increment: item; /* Увеличиваем счетчик для каждого li */
+      position: relative; /* Для позиционирования псевдоэлемента */
+      padding-left: clamp(5px, 1.5vw, 25px);
     }
 
-    .important {
-        margin-block: 25px;
-        padding-block: 20px;
-        padding-inline: 15px;
-        width: 100%;
-        border: 1px solid var(--contrast-color);
-        border-radius: 5px;
-        background: #101010;
+    > li:before {
+      content: "0" counter(item); /* Выводим число с кастомным оформлением */
+      position: absolute;
+      left: -30px; /* Отступ слева для счетчика */
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: clamp(14px, 1.7vw, 20px);
+      line-height: 150%;
+      text-align: center;
+      color: var(--main-font);
 
-        font-family: 'Manrope', sans-serif;
-        font-weight: 700;
-        font-size: clamp(14px, 1.6vw, 18px);
-        line-height: 150%;
-        color: var(--main-font);
+      border-radius: 50px;
+      background-color: #9747ff;
+      min-width: clamp(26px, 3vw, 36px);
+      min-height: clamp(26px, 3vw, 36px);
+      aspect-ratio: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+  }
 
-    h2 {
-        font-family: 'Geologica', sans-serif;
-        font-weight: 700;
-        font-size: clamp(20px, 2.6vw, 32px);
-        line-height: 140%;
-        color: var(--main-font);
-    }
+  .include-list-check {
+    padding-left: 40px;
 
-    h3 {
-        font-family: 'Geologica', sans-serif;
-        font-weight: 700;
-        font-size: clamp(18px, 2.4vw, 28px);
-        line-height: 140%;
-        color: var(--main-font);
-    }
+    > li {
+      > ul {
+        padding-left: clamp(5px, 1.5vw, 25px);
+        > li:before {
+          content: ""; /* Выводим число с кастомным оформлением */
+          position: absolute;
+          left: -30px; /* Отступ слева для счетчика */
+          top: 50%;
+          transform: translateY(-50%);
 
+          min-width: clamp(26px, 3vw, 36px);
+          min-height: clamp(26px, 3vw, 36px);
+          aspect-ratio: 1;
 
-
-
-    ul, ol {
-        li {
-            margin-top: 15px;
-            font-family: 'Manrope', sans-serif;
-            font-weight: 500;
-            font-size: clamp(13px, 1.5vw, 18px);
-            line-height: 150%;
-            color: var(--main-font);
+          background-image: url(/img/svg/list-check.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
         }
+      }
     }
+  }
+
+  ul {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    li {
+      position: relative; /* Для позиционирования псевдоэлемента */
+      padding-left: clamp(5px, 1.5vw, 25px);
+    }
+
+    li:before {
+      content: ""; /* Выводим число с кастомным оформлением */
+      position: absolute;
+      left: -30px; /* Отступ слева для счетчика */
+      top: 50%;
+      transform: translateY(-50%);
+
+      min-width: clamp(26px, 3vw, 36px);
+      min-height: clamp(26px, 3vw, 36px);
+      aspect-ratio: 1;
+
+      background-image: url(/img/svg/list-dot.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .check-list {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    li {
+      position: relative; /* Для позиционирования псевдоэлемента */
+      padding-left: clamp(5px, 1.5vw, 25px);
+    }
+
+    li:before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      min-width: clamp(26px, 3vw, 36px);
+      min-height: clamp(26px, 3vw, 36px);
+      aspect-ratio: 1;
+
+      background-image: url(/img/svg/list-check.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 .check-list {
 }
@@ -155,6 +265,16 @@
 .include-list-dot {
 }
 .full-image {
+  margin-top: 10px;
+  width: 100%;
+  background: var(--main-font);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  img {
+  }
 }
 .a-blog-single__aside {
 }
@@ -179,4 +299,142 @@
 .blog-single__main-text {
 }
 .text {
+}
+
+.a-blog-about-autor {
+  margin-block: 60px;
+  border-radius: 15px;
+  padding: clamp(15px, 2.3vw, 30px);
+  background: #101010;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.a-blog-about-autor__img {
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+  }
+}
+.a-blog-about-autor__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.a-blog-about-autor__autor {
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--main-font);
+  opacity: 0.5;
+}
+.a-blog-about-autor__name {
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--main-font);
+}
+.a-blog-about-autor__position {
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--contrast-color);
+}
+.a-blog-about-autor__link {
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .a-blog-about-autor {
+    flex-direction: column;
+    align-items: start;
+  }
+  .a-blog-about-autor__link {
+    margin-left: 0;
+  }
+}
+
+.a-blog-information-after {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 60px;
+  flex-wrap: wrap;
+
+  margin-block: 60px;
+}
+.a-blog-tags,
+.a-blog-share-social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.a-blog-tags__title,
+.a-blog-share-social__title,
+.a-blog-reaction__title {
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: var(--main-font);
+}
+.a-blog-tags__list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  a {
+    display: block;
+    background: #525252;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 110%;
+    color: var(--main-font);
+  }
+}
+
+.a-blog-reaction {
+  margin-block: 60px;
+  border-radius: 15px;
+  padding: clamp(15px, 2.3vw, 30px);
+  background: #101010;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.a-blog-reaction__list {
+    display: flex;
+    gap: 8px;
+}
+.a-blog-reaction__button {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Geologica', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--main-font);
+
+    padding: 4px 8px;
+
+}
+
+.a-blog-reaction__button.active {
+    background: #e5ffad;
+    color: var(--main-background);
 }

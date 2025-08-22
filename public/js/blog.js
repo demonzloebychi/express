@@ -22,6 +22,10 @@ tagItems.forEach((tag) => {
 })
 
 
+
+
+
+
 // document.addEventListener("DOMContentLoaded", () => {
 //   const postsContainer = document.querySelector('.a-blog__list');
 //   const loadMoreBtn = document.querySelector('.a-blog__load-more');

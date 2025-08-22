@@ -48,6 +48,11 @@
   align-items: center;
 }
 .a-blog-item__author-img {
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+  }
 }
 .a-blog-item__author-name {
   font-weight: 700;
