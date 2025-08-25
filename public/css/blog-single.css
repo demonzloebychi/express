@@ -22,6 +22,11 @@
   display: flex;
   gap: 40px;
 }
+@media (max-width: 1024px) {
+  .a-blog-single__wrapper {
+    flex-direction: column;
+  }
+}
 .a-blog-single__content {
   flex: 1 1 0;
 
@@ -310,6 +315,7 @@
 }
 .a-blog-single__aside {
   max-width: 560px;
+  flex: 1 1 0;
 }
 .blog-single {
 }
@@ -582,7 +588,7 @@
   margin-top: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .a-blog-navigation-desktop {
     display: none;
   }
@@ -617,7 +623,7 @@
 
 
 
-@media (min-width:769px) {
+@media (min-width:1025px) {
   .a-blog-single-article__btn-navigation {
     display: none;
   }

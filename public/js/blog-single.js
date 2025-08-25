@@ -44,5 +44,16 @@ const openArticleNavBtn = document.querySelector('.js-open-article-nav')
 const articleNavMobile = document.querySelector('.a-blog-single-article__nav-mobile')
 
 openArticleNavBtn.addEventListener('click', function() {
-  articleNavMobile.classList.add('active')
+  articleNavMobile.classList.toggle('active')
+
+
+
+ 
 })
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 1024) {
+    articleNavMobile.classList.remove('active')
+  }
+})
+  
