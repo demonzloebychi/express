@@ -226,7 +226,7 @@ body.lock {
   background: rgba(0, 0, 0, 0.24);
 }
 .main {
-  margin-top: clamp(70px, 15vw, 214px);
+  padding-top: clamp(70px, 15vw, 214px);
 }
 
 .main.active {

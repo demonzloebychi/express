@@ -22,3 +22,27 @@ window.addEventListener('load', () => {
     });
   }
 });
+
+
+
+document.querySelectorAll('.a-blog-navigation__list a').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const targetText = link.textContent.trim();
+    const heading = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
+      .find(h => h.textContent.trim() === targetText);
+    if (heading) {
+      heading.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+
+
+
+const openArticleNavBtn = document.querySelector('.js-open-article-nav')
+const articleNavMobile = document.querySelector('.a-blog-single-article__nav-mobile')
+
+openArticleNavBtn.addEventListener('click', function() {
+  articleNavMobile.classList.add('active')
+})

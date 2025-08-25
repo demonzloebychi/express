@@ -102,6 +102,52 @@
                     <img src="/img/blog/blog-img-2.png" alt="" />
                   </div>
 
+                  <button
+                    class="a-blog-single-article__btn-navigation js-open-article-nav"
+                  >
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_3448_4537)">
+                        <path
+                          d="M10.5 18.5068H14.5V16.5068H10.5V18.5068ZM3.5 6.50684V8.50684H21.5V6.50684H3.5ZM6.5 13.5068H18.5V11.5068H6.5V13.5068Z"
+                          fill="#B8FF20"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3448_4537">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5 0.506836)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>Содержание</span>
+                  </button>
+                  <div class="a-blog-single-article__nav-mobile">
+                    <div class="a-blog-navigation">
+                      <div class="a-blog-navigation__title">Навигация</div>
+                      <nav class="a-blog-navigation__nav">
+                        <!--BLOG-NAV-BAR-->
+
+                        <button
+                          class="a-blog-navigation__btn js-read-more-btn"
+                          data-expand-text="Показать еще"
+                          data-collapse-text="Свернуть"
+                        >
+                          Показать еще
+                        </button>
+                      </nav>
+                    </div>
+                  </div>
+
                   <div class="a-blog-single-article__content">
                     <!--TEXT-FOR-BLOG-SINGLE-->
                   </div>
@@ -189,56 +235,67 @@
                   </div>
                 </div>
 
-
                 <div class="a-blog-reaction">
-                  <div class="a-blog-reaction__title">
-                    Добавьте реакцию
-                  </div>
+                  <div class="a-blog-reaction__title">Добавьте реакцию</div>
                   <ul class="a-blog-reaction__list">
                     <li>
                       <button class="a-blog-reaction__button">
-                        <img src="/img/svg/reactions/fire.svg" alt="">
+                        <img src="/img/svg/reactions/fire.svg" alt="" />
                         <span>999</span>
                       </button>
                     </li>
                     <li>
                       <button class="a-blog-reaction__button">
-                        <img src="/img/svg/reactions/smile.svg" alt="">
+                        <img src="/img/svg/reactions/smile.svg" alt="" />
                         <span>999</span>
                       </button>
                     </li>
                     <li>
                       <button class="a-blog-reaction__button">
-                        <img src="/img/svg/reactions/shock.svg" alt="">
+                        <img src="/img/svg/reactions/shock.svg" alt="" />
                         <span>999</span>
                       </button>
                     </li>
                     <li>
                       <button class="a-blog-reaction__button">
-                        <img src="/img/svg/reactions/wonder.svg" alt="">
+                        <img src="/img/svg/reactions/wonder.svg" alt="" />
                         <span>999</span>
                       </button>
                     </li>
                     <li>
                       <button class="a-blog-reaction__button">
-                        <img src="/img/svg/reactions/agressive.svg" alt="">
+                        <img src="/img/svg/reactions/agressive.svg" alt="" />
                         <span>999</span>
                       </button>
                     </li>
                     <li>
                       <button class="a-blog-reaction__button">
-                        <img src="/img/svg/reactions/anxious.svg" alt="">
+                        <img src="/img/svg/reactions/anxious.svg" alt="" />
                         <span>999</span>
                       </button>
                     </li>
                   </ul>
                 </div>
-
-
-
               </div>
 
-              <aside class="a-blog-single__aside"></aside>
+              <aside class="a-blog-single__aside">
+                <div class="a-blog-navigation-desktop">
+                  <div class="a-blog-navigation">
+                    <div class="a-blog-navigation__title">Навигация</div>
+                    <nav class="a-blog-navigation__nav">
+                      <!--BLOG-NAV-BAR-->
+
+                      <button
+                        class="a-blog-navigation__btn js-read-more-btn"
+                        data-expand-text="Показать еще"
+                        data-collapse-text="Свернуть"
+                      >
+                        Показать еще
+                      </button>
+                    </nav>
+                  </div>
+                </div>
+              </aside>
             </div>
           </div>
         </div>
@@ -250,8 +307,12 @@
         <!--BACK-TO-BOTTOM-->
       </main>
 
-      <script src="/js/blog-single.js"></script>
+      <script src="/js/read-more.js"></script>
+      <!-- <script src="/js/show-more-btn.js"></script> -->
+
       <!--FOOTER-->
     </div>
+
+    <script src="/js/blog-single.js"></script>
   </body>
 </html>

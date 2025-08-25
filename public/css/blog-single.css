@@ -19,15 +19,21 @@
 .a-blog-single {
 }
 .a-blog-single__wrapper {
+  display: flex;
+  gap: 40px;
+}
+.a-blog-single__content {
+  flex: 1 1 0;
+
   max-width: 1160px;
   padding-inline: clamp(10px, 2.5vw, 40px);
   padding-block: clamp(30px, 3.5vw, 40px);
   background: #1d1d1d;
   border-radius: 20px;
 }
-.a-blog-single__content {
-}
 .a-blog-single__information {
+  flex: 1 1 0;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -92,6 +98,13 @@
     line-height: 150%;
     color: var(--main-font);
   }
+  b {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: clamp(13px, 1.5vw, 18px);
+    line-height: 150%;
+    color: var(--main-font);
+  }
 
   .important {
     margin-block: 25px;
@@ -103,14 +116,20 @@
     background: #101010;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    gap: 20px;
 
     font-family: "Manrope", sans-serif;
     font-weight: 700;
     font-size: clamp(14px, 1.6vw, 18px);
     line-height: 150%;
     color: var(--main-font);
+
+    > p {
+      margin-top: 0;
+    }
   }
 
   h2 {
@@ -120,6 +139,8 @@
     font-size: clamp(20px, 2.6vw, 32px);
     line-height: 140%;
     color: var(--main-font);
+    scroll-margin-top: 200px;
+
   }
 
   h3 {
@@ -129,6 +150,7 @@
     font-size: clamp(18px, 2.4vw, 28px);
     line-height: 140%;
     color: var(--main-font);
+    scroll-margin-top: 200px;
   }
 
   ul,
@@ -144,18 +166,18 @@
   }
 
   ol {
-    list-style-type: none; /* Убираем стандартные маркеры */
-    counter-reset: item; /* Обнуляем счетчик */
+    list-style-type: none;
+    counter-reset: item;
     > li {
-      counter-increment: item; /* Увеличиваем счетчик для каждого li */
-      position: relative; /* Для позиционирования псевдоэлемента */
+      counter-increment: item;
+      position: relative;
       padding-left: clamp(5px, 1.5vw, 25px);
     }
 
     > li:before {
-      content: "0" counter(item); /* Выводим число с кастомным оформлением */
+      content: "0" counter(item);
       position: absolute;
-      left: -30px; /* Отступ слева для счетчика */
+      left: -30px;
 
       font-family: "Manrope", sans-serif;
       font-weight: 700;
@@ -181,11 +203,14 @@
 
     > li {
       > ul {
-        padding-left: clamp(5px, 1.5vw, 25px);
+        /* padding-left: clamp(5px, 1.5vw, 25px); */
+        padding: 0;
         > li:before {
-          content: ""; /* Выводим число с кастомным оформлением */
+          content: "";
           position: absolute;
-          left: -30px; /* Отступ слева для счетчика */
+          /* left: -30px; */
+          left: 0;
+
           top: 50%;
           transform: translateY(-50%);
 
@@ -203,16 +228,20 @@
   }
 
   ul {
-    list-style-type: none; /* Убираем стандартные маркеры */
+    list-style-type: none;
+    padding: 0;
     li {
-      position: relative; /* Для позиционирования псевдоэлемента */
-      padding-left: clamp(5px, 1.5vw, 25px);
+      position: relative;
+      /* padding-left: clamp(5px, 1.5vw, 25px); */
+      padding-left: clamp(40px, 4.5vw, 50px);
     }
 
     li:before {
-      content: ""; /* Выводим число с кастомным оформлением */
+      content: "";
       position: absolute;
-      left: -30px; /* Отступ слева для счетчика */
+      /* left: -30px; */
+      left: 0;
+
       top: 50%;
       transform: translateY(-50%);
 
@@ -228,16 +257,19 @@
   }
 
   .check-list {
-    list-style-type: none; /* Убираем стандартные маркеры */
+    list-style-type: none;
+    padding: 0;
     li {
-      position: relative; /* Для позиционирования псевдоэлемента */
-      padding-left: clamp(5px, 1.5vw, 25px);
+      position: relative;
+      /* padding-left: clamp(5px, 1.5vw, 25px); */
+      padding-left: clamp(40px, 4.5vw, 50px);
     }
 
     li:before {
       content: "";
       position: absolute;
-      left: -30px;
+      /* left: -30px; */
+      left: 0;
       top: 50%;
       transform: translateY(-50%);
 
@@ -277,6 +309,7 @@
   }
 }
 .a-blog-single__aside {
+  max-width: 560px;
 }
 .blog-single {
 }
@@ -402,7 +435,7 @@
 }
 
 .a-blog-reaction {
-  margin-block: 60px;
+  margin-top: 60px;
   border-radius: 15px;
   padding: clamp(15px, 2.3vw, 30px);
   background: #101010;
@@ -414,27 +447,190 @@
 }
 
 .a-blog-reaction__list {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .a-blog-reaction__button {
-    background: transparent;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Geologica', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 140%;
-    color: var(--main-font);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--main-font);
 
-    padding: 4px 8px;
-
+  padding: 4px 8px;
 }
 
 .a-blog-reaction__button.active {
-    background: #e5ffad;
-    color: var(--main-background);
+  background: #e5ffad;
+  color: var(--main-background);
+}
+
+.flex {
+  display: flex;
+  > * {
+    flex: 1 1 0;
+    min-width: 290px;
+  }
+}
+.gap-40 {
+  gap: 40px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.a-blog-navigation {
+  border: 1px solid rgba(184, 255, 32, 0.33);
+  border-radius: 20px;
+  padding: 30px;
+  background: #1d1d1d;
+
+  display: flex;
+  flex-direction: column;
+}
+.a-blog-navigation__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  color: var(--main-font);
+
+  border-radius: 100px;
+  padding: 8px 15px;
+
+  background: #101010;
+
+  margin-bottom: 15px;
+}
+.a-blog-navigation__nav {
+}
+
+.a-blog-navigation__list > li:nth-child(n + 3) {
+  display: none;
+}
+.a-blog-navigation__list.expanded > li {
+  display: list-item !important;
+}
+.a-blog-navigation__list {
+  > li {
+    padding-block: 15px;
+    border-top: 1px solid #4d4d4d;
+
+    opacity: 0.9;
+
+    ul {
+      padding: 0;
+      padding-top: 5px;
+      > li:before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        content: "";
+        background-color: var(--contrast-color);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+      }
+      > li {
+        opacity: 0.8;
+        margin-bottom: 5px;
+        position: relative;
+        padding-left: 20px;
+
+        > a {
+          font-family: "Geologica", sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          color: var(--main-font);
+        }
+      }
+    }
+
+    > a {
+      font-family: "Geologica", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: var(--main-font);
+    }
+  }
+}
+
+.a-blog-navigation__btn {
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--contrast-color);
+  opacity: 0.9;
+  padding: 0;
+  padding-block: 10px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .a-blog-navigation-desktop {
+    display: none;
+  }
+}
+
+.a-blog-single-article__btn-navigation {
+  border: 1px solid var(--contrast-color);
+  border-radius: 10px;
+  padding: 10px 0px;
+
+  background: #101010;
+
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--main-font);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+
+  margin-top: 25px;
+
+}
+
+
+
+
+
+
+@media (min-width:769px) {
+  .a-blog-single-article__btn-navigation {
+    display: none;
+  }
+  .a-blog-single-article__nav-mobile {
+    display: none;
+  }
+
+  
+}
+
+.a-blog-single-article__nav-mobile {
+  display: none;
+}
+.a-blog-single-article__nav-mobile.active {
+  display: block;
 }
