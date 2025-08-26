@@ -33,6 +33,7 @@ temp/
 # Сборки и артефакты
 dist/
 build/
+public/html/
 
 # Файлы среды (если есть)
 .env

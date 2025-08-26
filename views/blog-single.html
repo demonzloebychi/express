@@ -133,7 +133,11 @@
                   </button>
                   <div class="a-blog-single-article__nav-mobile">
                     <div class="a-blog-navigation">
-                      <div class="a-blog-navigation__title">Навигация</div>
+                      <div
+                        class="a-blog-navigation__title a-blog-aside-block__title"
+                      >
+                        Навигация
+                      </div>
                       <nav class="a-blog-navigation__nav">
                         <!--BLOG-NAV-BAR-->
 
@@ -276,6 +280,36 @@
                     </li>
                   </ul>
                 </div>
+
+                <div class="a-blog-reaction-popup">
+                  <button class="a-blog-reaction-popup__close">
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.74995 0.000213999L29.9996 26.25L26.2497 30L0 3.75019L3.74995 0.000213999Z"
+                        fill="#B8FF20"
+                      />
+                      <path
+                        d="M0.000400495 26.2498L26.2501 0L30 3.74997L3.75035 29.9998L0.000400495 26.2498Z"
+                        fill="#B8FF20"
+                      />
+                    </svg>
+                  </button>
+
+                  <div class="a-blog-reaction-popup__emoji">
+                    <img src="/img/svg/reactions/fire.svg" alt="" />
+                  </div>
+
+                  <div class="popup__title">Спасибо за реакцию!</div>
+                  <p class="popup__text">
+                    Она бесценна. Далее текст какой-нибудь
+                  </p>
+                </div>
               </div>
 
               <aside class="a-blog-single__aside">
@@ -305,7 +339,7 @@
                     Популярное в блоге
                   </div>
                   <ul class="a-blog-popular__list">
-                    <li class="a-blog-popular__item a-blog-popuplar-item">
+                    <li class="a-blog-popular__item a-blog-popular-item">
                       <div class="a-blog-popuplar-item__tags">
                         <div class="a-blog-item__tags">
                           <span>Разработка</span> <span>Дизайн</span>
@@ -313,7 +347,9 @@
                       </div>
                       <div class="a-blog-popuplar-item__name">
                         <div class="a-blog-item__title">
-                          Редизайн сайта и его последствия для трафика
+                          <a href=""
+                            >Редизайн сайта и его последствия для трафика</a
+                          >
                         </div>
                       </div>
                       <div class="a-blog-popuplar-item__info">
@@ -334,7 +370,7 @@
                       </div>
                     </li>
 
-                    <li class="a-blog-popular__item a-blog-popuplar-item">
+                    <li class="a-blog-popular__item a-blog-popular-item">
                       <div class="a-blog-popuplar-item__tags">
                         <div class="a-blog-item__tags">
                           <span>Разработка</span> <span>Дизайн</span>
@@ -342,7 +378,9 @@
                       </div>
                       <div class="a-blog-popuplar-item__name">
                         <div class="a-blog-item__title">
-                          Редизайн сайта и его последствия для трафика
+                          <a href=""
+                            >Редизайн сайта и его последствия для трафика</a
+                          >
                         </div>
                       </div>
                       <div class="a-blog-popuplar-item__info">
@@ -363,7 +401,7 @@
                       </div>
                     </li>
 
-                    <li class="a-blog-popular__item a-blog-popuplar-item">
+                    <li class="a-blog-popular__item a-blog-popular-item">
                       <div class="a-blog-popuplar-item__tags">
                         <div class="a-blog-item__tags">
                           <span>Разработка</span> <span>Дизайн</span>
@@ -371,7 +409,9 @@
                       </div>
                       <div class="a-blog-popuplar-item__name">
                         <div class="a-blog-item__title">
-                          Редизайн сайта и его последствия для трафика
+                          <a href=""
+                            >Редизайн сайта и его последствия для трафика</a
+                          >
                         </div>
                       </div>
                       <div class="a-blog-popuplar-item__info">
@@ -412,12 +452,8 @@
 
         <div class="a-blog-similar-articles">
           <div class="container">
-            <div class="a-blog-similar-articles__title">
-              Похожие статьи
-            </div>
+            <div class="a-blog-similar-articles__title">Похожие статьи</div>
             <!--BLOG-SWIPER-SINGLE-->
-
-            <a href="/blog" class="btn a-blog-similar-articles__btn">Все статьи</a>
           </div>
         </div>
 
@@ -428,11 +464,11 @@
         <!--BACK-TO-BOTTOM-->
       </main>
 
-      <script src="/js/read-more.js"></script>
-
       <!--FOOTER-->
     </div>
-
+    <script src="/js/read-more.js"></script>
+    <script src="/js/cookie.js"></script>
+    <script src="/js/popup.js"></script>
     <script src="/js/blog-single.js"></script>
   </body>
 </html>
