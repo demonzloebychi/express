@@ -61,6 +61,12 @@
   display: flex;
   align-items: center;
   gap: 20px;
+
+  font-family: "Geologica", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 110%;
+  color: var(--main-font);
 }
 .a-blog-item__date,
 .a-blog-item__views,
@@ -198,11 +204,9 @@
   color: var(--main-font);
 }
 
-
-
 .a-blog__load-more {
   width: 100%;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 110%;
@@ -216,7 +220,6 @@
   justify-content: center;
   background-color: var(--contrast-color);
   padding-block: 16px;
-
 }
 
 /* ЕСЛИ ПОПРОСЯТ ДЛЯ 1440px 3 КАРТОЧКИ В СТРОКЕ */
@@ -247,7 +250,7 @@
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .a-blog-item__link {
     svg {
       width: 13px;

@@ -145,7 +145,6 @@
     line-height: 140%;
     color: var(--main-font);
     scroll-margin-top: 200px;
-
   }
 
   h3 {
@@ -493,7 +492,8 @@
   flex-wrap: wrap;
 }
 
-.a-blog-navigation {
+/* .a-blog-navigation, */
+.a-blog-aside-block {
   border: 1px solid rgba(184, 255, 32, 0.33);
   border-radius: 20px;
   padding: 30px;
@@ -502,7 +502,9 @@
   display: flex;
   flex-direction: column;
 }
-.a-blog-navigation__title {
+
+/* .a-blog-navigation__title, */
+.a-blog-aside-block__title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -615,23 +617,15 @@
   width: 100%;
 
   margin-top: 25px;
-
 }
 
-
-
-
-
-
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
   .a-blog-single-article__btn-navigation {
     display: none;
   }
   .a-blog-single-article__nav-mobile {
     display: none;
   }
-
-  
 }
 
 .a-blog-single-article__nav-mobile {
@@ -639,4 +633,122 @@
 }
 .a-blog-single-article__nav-mobile.active {
   display: block;
+}
+
+.a-blog-single__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.a-blog-popuplar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #4d4d4d;
+}
+.a-blog-popuplar-item:last-child {
+  padding-bottom: 0;
+  padding-top: 15px;
+}
+
+.a-blog-popuplar-item__info {
+  margin-top: 4px;
+}
+
+.a-blog-banner {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 560px;
+}
+.a-blog-banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.a-blog-banner__title {
+}
+.btn {
+}
+.s-text {
+}
+.a-header__btn {
+}
+.popup-call-btn {
+}
+.a-blog-banner__title,
+.a-blog-banner__btn {
+  position: relative;
+}
+.a-blog-banner__title {
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 140%;
+  color: var(--main-font);
+
+  text-align: center;
+}
+.a-blog-banner__btn {
+  padding-block: clamp(13px, 1.45vw, 16px);
+  padding-inline: clamp(40px, 6vw, 80px);
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
+.blog-single-swiper {
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+    width: fit-content !important;
+  }
+  .blog-single-swiper__btn {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+.a-blog-similar-articles__title {
+  font-family: "Geologica", sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 40px);
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--main-font);
+  margin-bottom: clamp(20px, 2.5vw, 30px);
+}
+
+.a-blog-similar-articles {
+  margin-block: 85px;
+}
+.a-blog-similar-articles__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #404040;
+  white-space: nowrap;
+  margin: 0 auto;
+
+  padding-block: clamp(14px, 1.5vw, 16px);
+  padding-inline: 232px;
+}
+
+@media (max-width: 1024px) {
+  .a-blog-similar-articles__btn {
+      padding-inline: clamp(44px, 6vw, 80px);
+
+  }
 }
