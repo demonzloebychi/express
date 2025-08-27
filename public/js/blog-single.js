@@ -51,9 +51,12 @@ const openArticleNavBtn = document.querySelector(".js-open-article-nav");
 const articleNavMobile = document.querySelector(
   ".a-blog-single-article__nav-mobile"
 );
+const openArticleNavBtnIcon = document.querySelector('.icon')
 
 openArticleNavBtn.addEventListener("click", function () {
   articleNavMobile.classList.toggle("active");
+  openArticleNavBtn.classList.toggle('active');
+  openArticleNavBtnIcon.classList.toggle('active');
 });
 
 window.addEventListener("resize", function () {

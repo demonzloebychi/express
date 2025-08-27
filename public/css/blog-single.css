@@ -818,6 +818,14 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .a-blog-similar-articles--mobile {
+    display: none;
+  }
+}
+@media (max-width:1024px) {
+  .a-blog-similar-articles--desktop {
+    display: none;
+  }
 }
 .a-blog-reaction-popup {
   display: none;
@@ -852,3 +860,61 @@
 }
 .popup__text {
 }
+
+
+
+.icon {
+  width: 18px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-block: 1px;
+}
+.icon.active {
+    padding-block: 0;
+}
+.icon span {
+  display: block;
+  height: 2px;
+  background: var(--contrast-color);;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Линии имеют разную ширину для более интересного вида */
+.line1 {
+  width: 100%;
+}
+
+.line2 {
+  width: 60%;
+  align-self: center;
+}
+
+.line3 {
+  width: 25%;
+  align-self: center;
+
+}
+
+/* Активное состояние (например, при клике - бургер превращается в крест) */
+.icon.active .line1 {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 18px;
+}
+
+.icon.active .line2 {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.icon.active .line3 {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  width: 18px;
+}
+
