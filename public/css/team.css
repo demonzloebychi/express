@@ -8,7 +8,6 @@
 }
 
 .breadcrumb--team {
-  margin-bottom: clamp(20px, 2.5vw, 30px);
 }
 
 .team-information__wrapper {
@@ -16,11 +15,142 @@
   justify-content: space-between;
   padding-block: clamp(20px, 2vw, 40px);
   border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-}
 
+  flex-direction: column;
+}
+.team-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+    margin-bottom: clamp(20px, 2.5vw, 30px);
+
+}
 
 .team-control {
     margin-top: clamp(20px, 2.5vw, 30px);
     margin-bottom: clamp(30px, 3.5vw, 40px);
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(40px, 4.5vw, 50px);
+}
+.team-item__img {
+  img {
+    width: 310px;
+    height: 336px;
+  }
+}
+
+
+
+/* TEAM-SINGLE */
+
+.team-single__wrapper {
+  display: flex;
+  align-items: start;
+  gap: clamp(40px, 4.5vw, 50px);
+}
+.team-single__img {
+  img {
+    width: 620px;
+  }
+}
+
+
+
+
+.team-single {
+}
+.container {
+}
+.team-single__wrapper {
+}
+.team-single__img {
+}
+.team-single__information {
+}
+.team-single-information {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vw, 25px);
+}
+.team-single-information__position {
+  /* font-family: var(--second-family);
+font-weight: 400;
+font-size: clamp(16px, 2vw, 24px);
+line-height: 110%;
+letter-spacing: -0.03em;
+color: var(--green); */
+color: var(--contrast-color);
+}
+.team-single-information__name {
+}
+.team-single-information__about, 
+.team-single-information-merits__list {
+  font-family: "Manrope", sans-serif;  
+  font-weight: 500;
+  font-size: clamp(16px, 1.7vw, 18px);
+  line-height: 150%;
+  color: var(--main-font);
+}
+.team-single-information__experience {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 140%;
+  color: var(--main-font); 
+  b, strong {
+    color: var(--contrast-color);
+  }
+}
+.team-single-information__merits {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.team-single-information-merits {
+}
+.team-single-information-merits__list {
+
+    list-style-type: none;
+    padding: 0;
+    li {
+      position: relative;
+      margin-bottom: 25px;
+      /* padding-left: clamp(5px, 1.5vw, 25px); */
+      padding-left: clamp(40px, 4.5vw, 50px);
+    }
+
+    li:before {
+      content: "";
+      position: absolute;
+      /* left: -30px; */
+      left: 0;
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      min-width: clamp(26px, 3vw, 36px);
+      min-height: clamp(26px, 3vw, 36px);
+      aspect-ratio: 1;
+
+      background-image: url(/img/svg/list-dot.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+}
+
+
+
+
+
+
+.team-blog {
+  margin-top: clamp(80px, 10vw, 120px);
 }
