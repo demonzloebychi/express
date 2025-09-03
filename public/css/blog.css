@@ -9,9 +9,9 @@
 }
 .a-blog__list {
   display: flex;
-  flex-wrap: wrap;
   gap: clamp(20px, 3vw, 40px);
   justify-content: center;
+  flex-wrap: wrap;
 }
 .a-blog__item {
 }
@@ -24,7 +24,10 @@
   border-radius: 20px;
   max-width: 550px;
   min-width: 300px;
+
+  flex: 1 1 320px;
 }
+
 .a-blog-item__about {
   display: flex;
   flex-direction: column;
@@ -35,6 +38,9 @@
 .a-blog-item__info {
   display: flex;
   justify-content: space-between;
+
+  flex-wrap: wrap;
+  gap: 15px;
 
   font-family: "Geologica", sans-serif;
   font-weight: 500;
@@ -60,7 +66,7 @@
 .a-blog-item__deep-info {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 
   font-family: "Geologica", sans-serif;
   font-weight: 500;
@@ -246,10 +252,6 @@
     white-space: nowrap;
   }
 
-  .a-blog-item__info {
-    flex-direction: column;
-    gap: 15px;
-  }
 
   .a-blog-item__link {
     svg {
