@@ -39,16 +39,19 @@
 }
 .team-item__img {
   img {
-    /* width: 310px;
-    height: 336px; */
-    width: 100%;
-    height: 100%;
+    width: 310px; 
+    height: 336px;
   }
 }
-.team__item {
-  flex: 1 1 290px;
-}
 
+@media (max-width: 550px) {
+  .team-item__img {
+    img {
+      width: 100%; 
+      height: 100%;
+    }
+  }
+}
 
 /* TEAM-SINGLE */
 
@@ -77,6 +80,7 @@
   display: flex;
   flex-direction: column;
   gap: clamp(15px, 2vw, 25px);
+  /* flex: 1 1 0; */
 }
 .team-single-information__position {
   /* font-family: var(--second-family);
