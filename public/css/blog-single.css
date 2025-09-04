@@ -188,8 +188,11 @@
       padding-left: clamp(5px, 1.5vw, 25px);
 
       > ul {
+        margin-left: -15px;
         > li {
-          padding-left: clamp(30px, 3.5vw, 40px);
+          /* padding-left: clamp(30px, 3.5vw, 40px); */
+          padding-left: 40px;
+
         }
         > li:before {
             min-width: 24px;
@@ -232,8 +235,10 @@
       > ul {
         /* padding-left: clamp(5px, 1.5vw, 25px); */
         padding: 0;
+        margin-left: -15px;
         > li {
-          padding-left: clamp(30px, 3.5vw, 40px);
+          /* padding-left: clamp(30px, 3.5vw, 40px); */
+          padding-left: 40px;
         }
         > li:before {
           content: "";
@@ -296,6 +301,9 @@
   .check-list {
     list-style-type: none;
     padding: 0;
+    > p {
+      font-size: clamp(16px, 1.8vw, 20px);
+    }
     li {
       position: relative;
       /* padding-left: clamp(5px, 1.5vw, 25px); */
@@ -320,6 +328,21 @@
       background-position: center;
     }
   }
+
+  ol:has(li > ol), 
+  .include-list-check:has(li > ul) {
+  }
+  li:has(ol),
+  li:has(ul) {
+    font-size: clamp(16px, 1.8vw, 20px); /* или нужное значение */
+    
+  }
+
+  .list-title {
+    font-size: clamp(16px, 1.8vw, 20px);
+  }
+
+
 }
 .check-list {
 }
@@ -535,11 +558,11 @@
   display: flex;
   flex-direction: column;
 }
-.a-blog-single-article__nav-mobile {
+/* .a-blog-single-article__nav-mobile {
   .a-blog-navigation__title {
     margin-top: 20px;
   }
-}
+} */
 
 /* .a-blog-navigation__title, */
 .a-blog-aside-block__title {
@@ -549,7 +572,7 @@
   width: fit-content;
   font-family: "Geologica", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(13px, 1.45vw, 16px);
   line-height: 110%;
   color: var(--main-font);
 
@@ -599,7 +622,7 @@
         > a {
           font-family: "Geologica", sans-serif;
           font-weight: 400;
-          font-size: 18px;
+          font-size: clamp(14px, 1.6vw, 18px);
           line-height: 140%;
           color: var(--main-font);
         }
@@ -609,7 +632,7 @@
     > a {
       font-family: "Geologica", sans-serif;
       font-weight: 500;
-      font-size: 20px;
+      font-size: clamp(16px, 1.8vw, 20px);
       line-height: 140%;
       color: var(--main-font);
     }
@@ -619,7 +642,7 @@
 .a-blog-navigation__btn {
   font-family: "Geologica", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(16px, 1.8vw, 20px);
   line-height: 140%;
   color: var(--contrast-color);
   opacity: 0.9;
@@ -671,6 +694,10 @@
 }
 .a-blog-single-article__nav-mobile.active {
   display: block;
+
+      border: 1px solid var(--contrast-color);
+    border-radius: 15px;
+    padding: 15px;
 }
 
 .a-blog-single__aside {
@@ -772,7 +799,7 @@
 }
 
 .a-blog-similar-articles {
-  margin-block: 85px;
+  margin-block: clamp(30px, 5vw, 85px);
 }
 .a-blog-similar-articles__btn {
   display: flex;
@@ -849,7 +876,7 @@
 @media (min-width: 1025px) {
   .a-blog-similar-articles__btn {
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -863,6 +890,7 @@
   }
 }
 .a-blog-reaction-popup {
+  min-width: 300px;
   background: #262626;
   border-radius: 15px;
   padding: 20px 40px 0px 40px;
