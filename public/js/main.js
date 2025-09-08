@@ -120,6 +120,7 @@ let projectTab = function () {
 projectTab();
 
 const anchors = document.querySelectorAll("a[href*='#']");
+
 for (let anchor of anchors) {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -130,6 +131,24 @@ for (let anchor of anchors) {
     });
   });
 }
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const blockID = anchor.getAttribute("href");
+    const targetElement = document.querySelector(blockID);
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - 200;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  });
+}
+
 
 const swiperProducts = new Swiper(".products__body", {
   navigation: {
