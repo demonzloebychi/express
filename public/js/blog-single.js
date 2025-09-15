@@ -51,12 +51,12 @@ const openArticleNavBtn = document.querySelector(".js-open-article-nav");
 const articleNavMobile = document.querySelector(
   ".a-blog-single-article__nav-mobile"
 );
-const openArticleNavBtnIcon = document.querySelector('.icon')
+const openArticleNavBtnIcon = document.querySelector(".icon");
 
 openArticleNavBtn.addEventListener("click", function () {
   articleNavMobile.classList.toggle("active");
-  openArticleNavBtn.classList.toggle('active');
-  openArticleNavBtnIcon.classList.toggle('active');
+  openArticleNavBtn.classList.toggle("active");
+  openArticleNavBtnIcon.classList.toggle("active");
 });
 
 window.addEventListener("resize", function () {
@@ -65,4 +65,41 @@ window.addEventListener("resize", function () {
   }
 });
 
+window.addEventListener("scroll", () => {
+  if (window.innerWidth >= 1025) {
+    const aside = document.querySelector(".a-blog-single__aside");
+    const stickyBlock = document.querySelector(".a-blog-navigation-desktop");
+    const bottomBlock = document.querySelector(".a-blog-popular"); 
 
+    const asideRect = aside.getBoundingClientRect();
+    const stickyRect = stickyBlock.getBoundingClientRect();
+    const bottomRect = bottomBlock.getBoundingClientRect();
+
+    const offsetTop = 200; 
+
+    if (
+      asideRect.top < offsetTop &&
+      bottomRect.top > stickyRect.height + offsetTop
+    ) {
+      // Приклеиваем блок к верху
+      stickyBlock.style.position = "fixed";
+      stickyBlock.style.top = offsetTop + "px";
+      stickyBlock.style.width = asideRect.width + "px";
+    } else if (bottomRect.top <= stickyRect.height + offsetTop) {
+      // Останавливаем перед нижними блоками
+      stickyBlock.style.position = "absolute";
+      stickyBlock.style.top =
+        aside.offsetHeight -
+        stickyBlock.offsetHeight -
+        (aside.offsetHeight - bottomBlock.offsetTop) +
+        -40 +
+        "px";
+      stickyBlock.style.width = "100%";
+    } else {
+      // Исходное состояние
+      stickyBlock.style.position = "static";
+      stickyBlock.style.top = "";
+      stickyBlock.style.width = "";
+    }
+  }
+});

@@ -356,6 +356,14 @@
 }
 .include-list-dot {
 }
+.compare {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  > div {
+    flex: 1 1 0;
+  }
+}
 .full-image {
   margin-top: 20px;
   width: 100%;
@@ -368,6 +376,8 @@
   img {
   }
 }
+
+
 .a-blog-single__aside {
   max-width: 560px;
   flex: 1 1 0;
@@ -687,6 +697,22 @@
   .a-blog-single-article__nav-mobile {
     display: none;
   }
+
+
+  .a-blog-single__aside {
+  position: relative;
+}
+.a-blog-popular {
+  position: absolute;
+  bottom: 560px;
+}
+.a-blog-banner {
+  position: absolute !important;
+  bottom: 0;
+}
+.a-blog-navigation-desktop {
+  position: fixed;
+}
 }
 
 .a-blog-single-article__nav-mobile {
@@ -705,6 +731,8 @@
   flex-direction: column;
   gap: 40px;
 }
+
+
 
 .a-blog-popular-item {
   display: flex;
@@ -728,19 +756,31 @@
 
 .a-blog-banner {
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 50px;
-  display: flex;
+  /* padding-top: 40px;
+  padding-bottom: 50px; */
+    width: 100%; 
+  padding-top: 100%; /* высота равна ширине для 1:1 */
+  padding-bottom: 0;  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 560px;
-  height: 560px;
+  /* height: 560px; */
+    height: auto;
+
+    background: url(../img/blog/banner.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 15px;
+
 }
 .a-blog-banner-background {
   position: absolute;
   top: 0;
   left: 0;
+
+  display: none;
 }
 .a-blog-banner__title {
 }
@@ -754,7 +794,7 @@
 }
 .a-blog-banner__title,
 .a-blog-banner__btn {
-  position: relative;
+  position: absolute;
 }
 .a-blog-banner__title {
   font-family: "Geologica", sans-serif;
@@ -764,15 +804,16 @@
   color: var(--main-font);
 
   text-align: center;
+  top: 10%;
 }
 .a-blog-banner__btn {
-  padding-block: clamp(13px, 1.45vw, 16px);
+  padding-block: clamp(11px, 0.8vw, 16px);
   padding-inline: clamp(40px, 6vw, 80px);
   font-size: clamp(12px, 1.4vw, 16px);
   max-width: 80%;
   white-space: nowrap;
   width: fit-content;
-  margin-bottom: 50px;
+  bottom: 10%;
 }
 
 .blog-single-swiper {
@@ -838,7 +879,9 @@
   .a-blog-banner {
     left: 50%;
     transform: translateX(-50%);
-    height: clamp(290px, 100vw, 560px);
+    padding-top: 60%;
+    background-size: 100%;
+    /* height: clamp(290px, 100vw, 560px); */
   }
   .a-blog-banner__btn {
     margin-bottom: 0;
