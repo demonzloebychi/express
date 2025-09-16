@@ -15,9 +15,14 @@
   /* gap: 20px; */
   /* padding-top: clamp(20px, 4vw, 24px);
     padding-bottom: clamp(20px, 4vw, 30px); */
-  gap: clamp(15px, 1.2vw, 20px);
+
+  /* gap: clamp(15px, 1.2vw, 20px);
   padding-top: clamp(20px, 1.5vw, 24px);
-  padding-bottom: clamp(20px, 1.6vw, 30px);
+  padding-bottom: clamp(20px, 1.6vw, 30px); */
+
+  gap: clamp(15px, 1vw, 20px);
+  padding-top: clamp(11px, 0.85vw, 17px);
+  padding-bottom: clamp(11px, 0.85vw, 17px);
 }
 
 .a-header__top {

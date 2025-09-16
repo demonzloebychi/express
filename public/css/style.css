@@ -225,8 +225,11 @@ body.lock {
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.24);
 }
-.main {
+/* .main {
   padding-top: clamp(70px, 15vw, 214px);
+} */
+.main {
+    padding-top: clamp(70px, 11vw, 185px);
 }
 
 .main.active {
