@@ -65,6 +65,8 @@ window.addEventListener("resize", function () {
   }
 });
 
+
+
 window.addEventListener("scroll", () => {
   if (window.innerWidth >= 1025) {
     const aside = document.querySelector(".a-blog-single__aside");
