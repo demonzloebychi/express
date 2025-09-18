@@ -5,11 +5,17 @@ const swiper = new Swiper(".blog-single-swiper", {
       spaceBetween: 0,
     },
     570: {
+      slidesPerView: "2",
       spaceBetween: 30,
     },
-    1440: {
-      spaceBetween: 55,
+    1024: {
+      slidesPerView: "3",
+      spaceBetween: 40,
     },
+    1920: {
+      slidesPerView: "3",
+      spaceBetween: 55,
+    }
   },
 
   // Navigation arrows

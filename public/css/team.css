@@ -158,6 +158,7 @@ color: var(--green); */
 
 .team-blog {
   margin-top: clamp(80px, 10vw, 120px);
+  margin-bottom: clamp(80px, 10vw, 130px);
   .swiper-navigation {
     justify-content: center;
     margin-top: 40px;

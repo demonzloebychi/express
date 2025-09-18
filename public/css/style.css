@@ -216,7 +216,7 @@ body {
 body.lock {
   overflow: hidden;
 }
-.header {
+/* .header {
   width: 100%;
   position: fixed;
   z-index: 102;
@@ -224,7 +224,7 @@ body.lock {
 .header.scrolled{
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.24);
-}
+} */
 /* .main {
   padding-top: clamp(70px, 15vw, 214px);
 } */
@@ -866,7 +866,7 @@ body.lock {
   text-transform: uppercase;
   z-index: 5;
   white-space: normal;
-  max-width: 70%;
+  max-width: 100%;
 }
 .base__tabs .item-tabs-base__main-text--develop {
   margin-top: 60px;

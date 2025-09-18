@@ -134,18 +134,17 @@
     font-size: clamp(14px, 1.6vw, 18px);
     line-height: 150%;
     color: var(--main-font);
-    
+
     > p {
       margin-top: 0;
     }
   }
 
   .important-center {
-      text-align: center;
-      align-items: center !important;
-      font-weight: 700;
-
-    }
+    text-align: center;
+    align-items: center !important;
+    font-weight: 700;
+  }
 
   h2 {
     margin-top: 35px;
@@ -192,11 +191,10 @@
         > li {
           /* padding-left: clamp(30px, 3.5vw, 40px); */
           padding-left: 40px;
-
         }
         > li:before {
-            min-width: 24px;
-            min-height: 24px;
+          min-width: 24px;
+          min-height: 24px;
         }
       }
     }
@@ -223,8 +221,6 @@
       justify-content: center;
       align-items: center;
     }
-
-    
   }
 
   .include-list-check {
@@ -264,10 +260,6 @@
       }
     }
   }
-
-
-
-
 
   ul {
     list-style-type: none;
@@ -329,20 +321,17 @@
     }
   }
 
-  ol:has(li > ol), 
+  ol:has(li > ol),
   .include-list-check:has(li > ul) {
   }
   li:has(ol),
   li:has(ul) {
     font-size: clamp(16px, 1.8vw, 20px); /* или нужное значение */
-    
   }
 
   .list-title {
     font-size: clamp(16px, 1.8vw, 20px);
   }
-
-
 }
 .check-list {
 }
@@ -376,7 +365,6 @@
   img {
   }
 }
-
 
 .a-blog-single__aside {
   max-width: 560px;
@@ -596,29 +584,42 @@
 .a-blog-navigation__nav {
 }
 
-/* .a-blog-navigation__list > li:nth-child(n + 3) {
+.a-blog-navigation__list > li:nth-child(n + 3) {
   display: none;
-} */
-/* .a-blog-navigation__list.expanded > li {
+}
+.a-blog-navigation__list.expanded > li {
   display: list-item !important;
-} */
-.a-blog-navigation__list.expanded {
+}
+/* .a-blog-navigation__list.expanded {
   overflow-y: scroll;
 }
 .a-blog-navigation__list.expanded::-webkit-scrollbar {
   display: block;
   width: 2px;
 
-}
-.a-blog-navigation__list::-webkit-scrollbar {
-  display: none;
+} */
+
+.a-blog-navigation-desktop {
+  .a-blog-navigation__list::-webkit-scrollbar {
+    /* display: none; */
+    display: block;
+    width: 2px;
+  }
+  .a-blog-navigation__list {
+    overflow-y: scroll;
+
+    max-height: 40vh;
+    padding-right: 5px;
+  }
+  .a-blog-navigation__list > li {
+    display: list-item !important;
+  }
 
 }
 .a-blog-navigation__list {
-  overflow-y: hidden;
-  max-height: 40vh;
-  padding-right: 5px;
-    /* max-height: 100%; */
+  /* overflow-y: hidden; */
+
+  /* max-height: 100%; */
 
   > li {
     padding-block: 15px;
@@ -720,19 +721,17 @@
     display: none;
   }
 
-
   .a-blog-single__aside {
-  position: relative;
-}
-.a-blog-popular {
-  position: absolute;
-  bottom: 560px;
-}
-.a-blog-banner {
-  position: absolute !important;
-  bottom: 0;
-}
-
+    position: relative;
+  }
+  .a-blog-popular {
+    position: absolute;
+    bottom: 560px;
+  }
+  .a-blog-banner {
+    position: absolute !important;
+    bottom: 0;
+  }
 }
 
 .a-blog-single-article__nav-mobile {
@@ -741,9 +740,9 @@
 .a-blog-single-article__nav-mobile.active {
   display: block;
 
-      border: 1px solid var(--contrast-color);
-    border-radius: 15px;
-    padding: 15px;
+  border: 1px solid var(--contrast-color);
+  border-radius: 15px;
+  padding: 15px;
 }
 
 .a-blog-single__aside {
@@ -751,8 +750,6 @@
   flex-direction: column;
   gap: 40px;
 }
-
-
 
 .a-blog-popular-item {
   display: flex;
@@ -778,22 +775,22 @@
   position: relative;
   /* padding-top: 40px;
   padding-bottom: 50px; */
-    width: 100%; 
+  width: 100%;
   padding-top: 100%; /* высота равна ширине для 1:1 */
-  padding-bottom: 0;  display: flex;
+  padding-bottom: 0;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 560px;
   /* height: 560px; */
-    height: auto;
+  height: auto;
 
-    background: url(../img/blog/banner.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border-radius: 15px;
-
+  background: url(../img/blog/banner.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 15px;
 }
 .a-blog-banner-background {
   position: absolute;
@@ -839,9 +836,9 @@
 .blog-single-swiper {
   .swiper-wrapper {
   }
-  .swiper-slide {
+  /* .swiper-slide {
     width: fit-content !important;
-  }
+  } */
   .blog-single-swiper__btn {
     width: 60px !important;
     height: 60px !important;
@@ -947,7 +944,7 @@
     display: none;
   }
 }
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .a-blog-similar-articles--desktop {
     display: none;
   }
@@ -965,12 +962,11 @@
   flex-direction: column;
   align-items: center;
   top: -100%;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .a-blog-reaction-popup.active {
   top: 50%;
-  transition: all .3s ease-in-out;
-
+  transition: all 0.3s ease-in-out;
 }
 .a-blog-reaction-popup__close {
   background: transparent;
@@ -990,8 +986,6 @@
 .popup__text {
 }
 
-
-
 .icon {
   width: 18px;
   height: 14px;
@@ -1003,12 +997,12 @@
   padding-block: 1px;
 }
 .icon.active {
-    padding-block: 0;
+  padding-block: 0;
 }
 .icon span {
   display: block;
   height: 2px;
-  background: var(--contrast-color);;
+  background: var(--contrast-color);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -1026,7 +1020,6 @@
 .line3 {
   width: 25%;
   align-self: center;
-
 }
 
 /* Активное состояние (например, при клике - бургер превращается в крест) */
@@ -1046,4 +1039,3 @@
   transform-origin: bottom left;
   width: 18px;
 }
-
