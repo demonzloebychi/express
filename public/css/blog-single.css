@@ -727,6 +727,7 @@
   .a-blog-popular {
     position: absolute;
     bottom: 560px;
+    width: 100%;
   }
   .a-blog-banner {
     position: absolute !important;
