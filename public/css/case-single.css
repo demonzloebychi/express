@@ -21,7 +21,7 @@
   max-width: 830px;
 }
 .case-single-main__title {
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 600;
   font-size: clamp(24px, 3vw, 48px);
   line-height: 110%;
@@ -34,7 +34,7 @@
   gap: 20px;
   padding-bottom: 20px;
   a {
-    font-family: "Geologica", sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 600;
     font-size: clamp(16px, 2vw, 32px);
     line-height: 110%;
@@ -52,7 +52,7 @@
 .case-single-main__breadcrumbs {
   padding-bottom: clamp(20px, 4vw, 70px);
   a {
-    font-family: "Geologica", sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 400;
     font-size: clamp(13px, 1.4vw, 16px);
     line-height: 110%;
@@ -81,7 +81,7 @@
   border-bottom: 1px solid #d9d9d9;
 
   dt {
-    font-family: "Manrope", sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 500;
     font-size: clamp(12px, 1.4vw, 16px);
     line-height: 120%;
@@ -89,7 +89,7 @@
     margin-bottom: 5px;
   }
   dd {
-    font-family: "Manrope", sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 500;
     font-size: clamp(16px, 2vw, 32px);
     line-height: 120%;
@@ -161,7 +161,9 @@
 }
 .csir-swiper-slide {
   width: 100%;
-  height: auto;
+  height: fit-content;
+    max-height: 390px;
+
   background: #525252;
   border-radius: 15px;
   padding: 66px 80px;
@@ -285,7 +287,7 @@
 .form-chips__item {
   flex: 1 1 0;
   min-width: 155px;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 110%;
@@ -360,13 +362,12 @@
 
 @media (max-width: 768px) {
   .nav-case-single-done {
-  flex-wrap: wrap;
-}
-.nav-case-single-done__btn {
-flex: 1 1 0;
+    flex-wrap: wrap;
+  }
+  .nav-case-single-done__btn {
+    flex: 1 1 0;
     min-width: 155px;
-}
-
+  }
 }
 
 .nav-case-single-done__btn {
@@ -378,7 +379,7 @@ flex: 1 1 0;
   justify-content: center;
   align-items: center;
 
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 110%;
@@ -413,8 +414,6 @@ flex: 1 1 0;
   display: flex;
   /* grid-template-columns: 40% 1fr; */
   gap: clamp(30px, 5vw, 78px);
-
- 
 }
 .info-case-single-done__left {
   width: 40%;
@@ -445,14 +444,12 @@ flex: 1 1 0;
 .item-case-single-info__description {
 }
 
-
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .info-case-single-done {
     .case-single-info__item {
-        max-width: 155px;
-      }  
+      max-width: 155px;
+    }
   }
-   
 }
 
 /* tabs */
@@ -536,10 +533,9 @@ flex: 1 1 0;
   background: var(--third-dark-color);
   border-radius: 30px;
 
-
   display: flex;
-    justify-content: center;
-    width: 100%;
+  justify-content: center;
+  width: 100%;
 
   img {
     max-width: 353px;
@@ -570,4 +566,3 @@ flex: 1 1 0;
     }
   }
 }
-

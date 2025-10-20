@@ -13,6 +13,10 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* .a-blog__list-li, .a-blog__list li {
+  flex: 1 1 300px;
+} */
 .a-blog__item {
 }
 .a-blog-item {
@@ -23,11 +27,25 @@
   background: #1d1d1d;
   border-radius: 20px;
   max-width: 550px;
-  min-width: 300px;
+  /* width: clamp(300px, 30vw, 550px);
+  min-width: 300px; */
+  min-width: clamp(320px, 30vw, 550px);
 
   flex: 1 1 320px;
+
+  container-type: inline-size;
 }
 
+
+@media (max-width:984px) {
+  .a-blog__list-li, .a-blog__list li {
+    flex: 1 1 0;
+  }
+  .a-blog-item  {
+    min-width: 300px;
+    width: 100%;
+  }
+}
 .a-blog-item__about {
   display: flex;
   flex-direction: column;
@@ -37,17 +55,31 @@
 }
 .a-blog-item__info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 15px;
 
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 110%;
   color: var(--main-font);
+
+  height: 40px;
 }
+
+.a-blog-item__info:has(.a-blog-item__author) {
+  justify-content: space-between;
+}
+
+@container (max-width: 530px) {
+  .a-blog-item__info {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
 .a-blog-item__author {
   display: flex;
   gap: 10px;
@@ -68,7 +100,7 @@
   align-items: center;
   gap: 10px;
 
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 110%;
@@ -84,37 +116,46 @@
 }
 
 .a-blog-item__title {
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 600;
   font-size: clamp(16px, 1.8vw, 20px);
   line-height: 130%;
   color: var(--main-font);
+  /* height: 78px; */
 }
+
+
 .a-blog-item__tags {
   display: flex;
-  align-items: center;
-  gap: clamp(20px, 2.5vw, 30px);
+  align-items: start;
+  gap: clamp(17px, 2.5vw, 30px);
+  row-gap: clamp(10px, 1.2vw, 15px);
 
-  font-family: "Geologica", sans-serif;
+  flex-wrap: wrap;
+
+  font-family: 'Geologica', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 110%;
   color: var(--main-font);
+  height: 67px;
 
-  span {
+  span, a {
     position: relative;
     padding-left: 25px;
+    color: var(--main-font);
   }
-  span:before {
+  span:before, a:before {
     position: absolute;
-    content: url("/img/svg/sharp.svg");
+    content: url('../img/svg/sharp.svg');
     top: 50%;
     transform: translateY(-50%);
     left: 0;
   }
 }
 .a-blog-item__link {
-  font-family: "Geologica", sans-serif;
+  margin-top: auto;
+  font-family: 'Geologica', sans-serif;
   font-weight: 600;
   font-size: clamp(16px, 1.8vw, 20px);
   line-height: 130%;
@@ -129,7 +170,7 @@
   .pagination-item {
     aspect-ratio: 1;
 
-    font-family: "Geologica", sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-weight: 600;
     font-size: 15px;
     line-height: 110%;
@@ -168,26 +209,25 @@
   align-items: center;
   gap: 20px;
 
-  flex-wrap: nowwrap;
+  flex-wrap: nowrap;
   overflow-x: auto;
-  -ms-overflow-style: none; 
-  scrollbar-width: none;  
-
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .tag__list::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
-/* .tag__list li:nth-child(n + 6) {
+.tag__list li:nth-child(n + 6) {
   display: none;
-} */
- .tag__list.expanded {
+}
+.tag__list.expanded {
   overflow-x: hidden;
   flex-wrap: wrap;
- }
-/* .tag__list.expanded li {
+}
+.tag__list.expanded li {
   display: flex;
-} */
+}
 .tags-read-more-btn {
 }
 .tags-read-more-btn__blog {
@@ -214,7 +254,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 110%;
@@ -239,7 +279,7 @@
 }
 
 .blog-info__title {
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 600;
   font-size: clamp(32px, 4.5vw, 64px);
   line-height: 110%;
@@ -249,7 +289,7 @@
 
 .a-blog__load-more {
   width: 100%;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 110%;

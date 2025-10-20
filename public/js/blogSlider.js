@@ -2,7 +2,7 @@ const swiper = new Swiper(".blog-single-swiper", {
   slidesPerView: "auto",
   breakpoints: {
     320: {
-      spaceBetween: 0,
+      spaceBetween: 10,
     },
     570: {
       slidesPerView: "2",

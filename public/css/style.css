@@ -6140,6 +6140,13 @@ button:disabled {
     padding-bottom: 15px;
     background: transparent;
   }
+  .spoiler__arrow {
+    top: 25px;
+  }
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
   .spoiler-item.active .arrow span,
   .spoiler-item.active .arrow::after,
   .spoiler-item.active .arrow::before {
@@ -6148,6 +6155,8 @@ button:disabled {
   .spoiler-item.active .arrow::before {
     top: 0;
     right: 1px;
+    top: 2px;
+    right: -2px;
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -6158,6 +6167,8 @@ button:disabled {
     transform: rotate(90deg);
     top: 12px;
     right: -12px;
+    top: 11px;
+    right: -11px;
   }
   .spoiler__filter {
     color: var(--contrast-color) !important;

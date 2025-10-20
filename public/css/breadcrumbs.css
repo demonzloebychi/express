@@ -1,8 +1,12 @@
 .breadcrumb {
 }
 .breadcrumb__list {
-  display: flex;
+  /* display: flex;
   gap: 10px;
+  flex-wrap: wrap; */
+  li {
+    display: inline;
+  }
 
   a {
     font-family: "Geologica", sans-serif;
