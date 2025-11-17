@@ -1169,7 +1169,8 @@ body.lock {
 .nav-tabs-base .nav-tabs-base__text {
   color: var(--main-font);
   font-family: "Manrope", sans-serif;
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: clamp(20px, 1.3vw, 24px);
   font-weight: 600;
   line-height: 1.1;
 }
