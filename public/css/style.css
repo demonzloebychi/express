@@ -1152,7 +1152,7 @@ body.lock {
     margin-bottom: clamp(30px, 3vw, 110px);
   }
   .year {
-    margin-top: 130px;
+    margin-top: 130px !important;
   }
 }
 .nav-tabs-base .nav-tabs-base__img div {
