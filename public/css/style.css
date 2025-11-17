@@ -1142,6 +1142,19 @@ body.lock {
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
 }
+
+@media (max-width: 1440px) {
+  .nav-tabs-base .nav-tabs-base__item {
+      height: clamp(110px, 10vw, 220px);
+  }
+  .base__tabs .item-tabs-base__btns {
+    margin-top: clamp(10px, 3vw, 60px);
+    margin-bottom: clamp(30px, 3vw, 110px);
+  }
+  .year {
+    margin-top: 130px;
+  }
+}
 .nav-tabs-base .nav-tabs-base__img div {
   margin-top: -2%;
 }

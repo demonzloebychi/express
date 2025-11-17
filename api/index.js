@@ -128,43 +128,6 @@ app.post('/api/call', async (req, res) => {
 
 
 
-// const transporter = nodemailer.createTransport({
-//   host: 'smtp.mail.ru',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: 'nikolaislnkv@mail.ru',
-//     pass: 'BKx2qdiyt3hZF6zArxgp'
-//   }
-// });
-
-// app.post('/api/call', async (req, res) => {
-//   const { name, phone, comment, site, policy } = req.body;
-
-//   if (!phone || !policy) {
-//     return res.status(400).json({ message: 'Телефон и согласие с политикой обязательны' });
-//   }
-
-//   const mailOptions = {
-//     from: 'nikolaislnkv@mail.ru',
-//     to: 'nikolaislnkv@mail.ru',
-//     subject: 'Новая заявка с сайта',
-//     text: `
-// Имя: ${name || 'Не указано'}
-// Телефон: ${phone}
-// Комментарий: ${comment || 'Не указан'}
-// Сайт: ${site || 'Не указан'}
-//     `
-//   };
-
-//   try {
-//     await transporter.sendMail(mailOptions);
-//     res.json({ message: 'Заявка успешно отправлена' });
-//   } catch (error) {
-//     console.error('Ошибка отправки письма:', error);
-//     res.status(500).json({ message: 'Ошибка сервера при отправке письма' });
-//   }
-// });
 
 
 (async () => {

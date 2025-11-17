@@ -43,7 +43,7 @@
   position: relative;
 }
 .a-header__hours-work {
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-size: clamp(14px, 1vw, 16px);
 }
 .a-header__phone-info {
@@ -52,7 +52,7 @@
 }
 
 .a-header__phone {
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 500;
   font-size: clamp(16px, 1.15vw, 20px);
   line-height: 120%;
@@ -70,7 +70,7 @@
 }
 
 .a-header__phone-text {
-  font-family: "Geologica", sans-serif;
+  font-family: 'Geologica', sans-serif;
   font-weight: 300;
   font-size: clamp(11px, 0.8vw, 13px);
   line-height: 120%;
@@ -178,10 +178,20 @@
     margin-top: 15px;
     width: fit-content !important;
     white-space: nowrap;
+
+    min-width: 200px;
   }
 }
 .sub-a-menu-block__list {
   display: none;
+  li {
+    width: 100%;
+    .sub-a-menu-block__link {
+      margin-top: 8px;
+      width: 100%;
+      display: inline-block;
+    }
+  }
 }
 .sub-a-menu-block__link {
   font-size: clamp(14px, 1vw, 16px);
@@ -297,7 +307,7 @@
     cursor: pointer;
   }
   .a-header__burger-text {
-    font-family: "Geologica", sans-serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 20px;
     line-height: 1.2;
     font-weight: 600;
@@ -329,7 +339,7 @@
   }
   .a-header__burger::before,
   .a-header__burger::after {
-    content: " ";
+    content: ' ';
     position: absolute;
     width: 23px;
     background-color: #fff;
@@ -412,7 +422,7 @@
 .input {
   width: 100%;
   color: #606060;
-  font-family: "Manrope", serif;
+  font-family: 'Manrope', serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 110%;
@@ -464,7 +474,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
 
   background-color: currentColor;
 
@@ -476,7 +486,7 @@
 }
 
 .checkbox:checked:before {
-  mask: url("/img/svg/check.svg") no-repeat center / 100%;
+  mask: url('/img/svg/check.svg') no-repeat center / 100%;
   color: var(--main-background);
   transform: scale(0.8);
 }
@@ -486,7 +496,7 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 17px;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 110%;
